@@ -1,59 +1,6 @@
 {
-  "rewrites": [
-    {
-      "source": "/assets/dr-bruno-william.jpg",
-      "destination": "/dr-bruno-william.jpg"
-    },
-    {
-      "source": "/assets/dr-bruno-william.png",
-      "destination": "/dr-bruno-william.png"
-    },
-    {
-      "source": "/assets/hero-cover.jpg",
-      "destination": "/hero-cover.jpg"
-    },
-    {
-      "source": "/assets/index-Cf9v3xtf.js",
-      "destination": "/index-Cf9v3xtf.js"
-    },
-    {
-      "source": "/assets/index-CzV0F3rh.css",
-      "destination": "/index-CzV0F3rh.css"
-    },
-    {
-      "source": "/assets/logo-bw.png",
-      "destination": "/logo-bw.png"
-    },
-    {
-      "source": "/assets/query-vendor-E4HuqEnl.js",
-      "destination": "/query-vendor-E4HuqEnl.js"
-    },
-    {
-      "source": "/assets/router-vendor-B5MdcdXU.js",
-      "destination": "/router-vendor-B5MdcdXU.js"
-    },
-    {
-      "source": "/assets/ui-vendor-DsDsQ0yK.js",
-      "destination": "/ui-vendor-DsDsQ0yK.js"
-    },
-    {
-      "source": "/assets/utils-vendor-DqmDTpxI.js",
-      "destination": "/utils-vendor-DqmDTpxI.js"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/:file(.*\\.js|.*\\.css|.*\\.png|.*\\.jpg|.*\\.woff2)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    }
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
