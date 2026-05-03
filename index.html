@@ -8,7 +8,6 @@
   <meta name="author" content="Dr. Bruno William Lopes de Almeida" />
   <meta name="keywords" content="alergista pediátrico São Paulo, imunologista pediátrico SP, médico APLV, alergia alimentar criança SP, rinite alérgica infantil, asma infantil São Paulo, dermatite atópica bebê, urticária infantil, imunoterapia criança, Dr. Bruno William, Livance Tatuapé, Livance Ibirapuera, UNIFESP alergia" />
   <meta name="robots" content="index, follow" />
-  <meta name="google-site-verification" content="kvmNs7KHVAdfJbKaxjcOmEOO1Fct5zC-7Vl2H--dp1w" />
   <link rel="canonical" href="https://www.drbrunoalergoimuno.com.br" />
   <link rel="icon" type="image/png" href="/logo-bw.png" />
 
@@ -35,17 +34,19 @@
         "@type": "Physician",
         "@id": "https://www.drbrunoalergoimuno.com.br/#physician",
         "name": "Dr. Bruno William Lopes de Almeida",
+        "description": "Especialista em Alergia e Imunologia Pediátrica pela UNIFESP. Atende em São Paulo (Tatuapé, Ibirapuera) e online.",
         "medicalSpecialty": ["Allergy and Immunology", "Pediatrics"],
         "url": "https://www.drbrunoalergoimuno.com.br",
         "image": "https://www.drbrunoalergoimuno.com.br/dr-bruno-william.png",
         "email": "drbrunoalergoimuno@gmail.com",
         "telephone": "+5511920383955",
+        "priceRange": "$$",
         "sameAs": ["https://www.instagram.com/dr.brunowilliam"],
         "address": [
           {
             "@type": "PostalAddress",
             "streetAddress": "R. Vilela, 665 - 8º Andar",
-            "addressLocality": "Tatuapé",
+            "addressLocality": "São Paulo",
             "addressRegion": "SP",
             "postalCode": "03314-000",
             "addressCountry": "BR"
@@ -53,10 +54,60 @@
           {
             "@type": "PostalAddress",
             "streetAddress": "R. Agostinho Rodrigues Filho, 550",
-            "addressLocality": "Vila Clementino",
+            "addressLocality": "São Paulo",
             "addressRegion": "SP",
             "postalCode": "04026-040",
             "addressCountry": "BR"
+          }
+        ],
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "-23.5410",
+          "longitude": "-46.5768"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Qual a idade mínima para consulta?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Atendo crianças desde recém-nascidos até adolescentes, e também adultos."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como funciona a teleconsulta?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A consulta online é feita por videochamada segura. Você recebe o link no dia e horário agendado."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Preciso de encaminhamento?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não. Aceito pacientes direto, sem necessidade de encaminhamento médico."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quanto tempo dura a consulta?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "As consultas duram em média 40 minutos, permitindo investigação completa."
+            }
           }
         ]
       }
@@ -477,6 +528,47 @@
       line-height: 1.65;
     }
 
+    /* ── FAQ ── */
+    #faq { background: var(--off-white); }
+    .faq-grid {
+      display: grid;
+      gap: 12px;
+      margin-top: 32px;
+    }
+    .faq-item {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 18px 20px;
+      border: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .faq-item:hover {
+      border-color: var(--gold-light);
+    }
+    .faq-item summary {
+      font-weight: 600;
+      color: var(--navy);
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      font-size: 1.4rem;
+      color: var(--gold);
+      font-weight: 400;
+    }
+    .faq-item[open] summary::after { content: '−'; }
+    .faq-item p {
+      margin-top: 12px;
+      color: var(--gray-mid);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
     /* ── AGENDAR ── */
     #agendar { background: var(--navy); }
     #agendar .section-title { color: var(--white); }
@@ -487,7 +579,6 @@
       gap: 48px;
       align-items: center;
     }
-    .agendar-left {}
     .agendar-options {
       display: flex;
       flex-direction: column;
@@ -767,9 +858,9 @@
 <body>
 
 <!-- NAV -->
-<nav>
-  <a href="#inicio" class="nav-brand">
-    <img src="/logo-bw.png" alt="Dr. Bruno William" />
+<nav role="navigation" aria-label="Navegação principal">
+  <a href="#inicio" class="nav-brand" aria-label="Dr. Bruno William - Início">
+    <img src="/logo-bw.png" alt="Logo Dr. Bruno William" />
     <div class="nav-brand-text">
       <span class="nav-brand-name">Dr. Bruno William</span>
       <span class="nav-brand-sub">Alergia e Imunologia Pediátrica — UNIFESP</span>
@@ -779,37 +870,39 @@
     <li><a href="#inicio">Início</a></li>
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#tratamentos">O que Tratamos</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#agendar" class="nav-cta">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
       WhatsApp
     </a></li>
   </ul>
-  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+  <button class="nav-hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
 <!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobile-menu">
-  <a href="#inicio" onclick="closeMenu()">Início</a>
-  <a href="#sobre" onclick="closeMenu()">Sobre</a>
-  <a href="#tratamentos" onclick="closeMenu()">O que Tratamos</a>
-  <a href="#agendar" onclick="closeMenu()">Agendar Consulta</a>
+<div class="mobile-menu" id="mobile-menu" role="menu">
+  <a href="#inicio" onclick="closeMenu()" role="menuitem">Início</a>
+  <a href="#sobre" onclick="closeMenu()" role="menuitem">Sobre</a>
+  <a href="#tratamentos" onclick="closeMenu()" role="menuitem">O que Tratamos</a>
+  <a href="#faq" onclick="closeMenu()" role="menuitem">FAQ</a>
+  <a href="#agendar" onclick="closeMenu()" role="menuitem">Agendar Consulta</a>
 </div>
 
 <!-- HERO -->
-<section id="inicio" class="hero">
+<section id="inicio" class="hero" aria-labelledby="hero-title">
   <div class="hero-inner">
     <div class="hero-text">
-      <div class="hero-badge">Formação UNIFESP · RQE 1406541</div>
-      <h1>Ajudo famílias a<br>respirarem aliviadas,<br><span>livres das Alergias.</span></h1>
+      <div class="hero-badge" aria-label="Credencial">Formação UNIFESP · RQE 1406541</div>
+      <h1 id="hero-title">Ajudo famílias a<br>respirarem aliviadas,<br><span>livres das Alergias.</span></h1>
       <p class="hero-subtitle">
         <strong>Dr. Bruno William</strong> | Especialista em Alergia e Imunologia Pediátrica pela
         <strong>UNIFESP</strong> | <strong>RQE 1406541</strong>
       </p>
       <div class="hero-cta-group">
-        <a href="https://wa.me/5511920383955?text=Olá%2C+Dr.+Bruno!+Gostaria+de+agendar+uma+consulta." target="_blank" rel="noopener" class="btn-primary">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <a href="https://wa.me/5511920383955?text=Olá%2C+Dr.+Bruno!+Gostaria+de+agendar+uma+consulta." target="_blank" rel="noopener" class="btn-primary" aria-label="Agendar consulta pelo WhatsApp">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Falar com a Equipe no WhatsApp →
         </a>
         <a href="#sobre" class="btn-ghost">Conheça o Dr. Bruno</a>
@@ -827,27 +920,27 @@
 </section>
 
 <!-- TRUST BAR -->
-<div class="trust-bar">
-  <div class="trust-item">
-    <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+<div class="trust-bar" role="list" aria-label="Credenciais e certificações">
+  <div class="trust-item" role="listitem">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
     Especialista ASBAI/AMB
   </div>
-  <div class="trust-item">
-    <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+  <div class="trust-item" role="listitem">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
     Especialista SBP — Pediatria
   </div>
-  <div class="trust-item">
-    <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+  <div class="trust-item" role="listitem">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
     Residência UNIFESP
   </div>
-  <div class="trust-item">
-    <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+  <div class="trust-item" role="listitem">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
     Atendimento Online para todo o Brasil
   </div>
 </div>
 
 <!-- SOBRE -->
-<section id="sobre">
+<section id="sobre" aria-labelledby="sobre-title">
   <div class="section-inner">
     <div class="sobre-grid">
       <div class="sobre-photo">
@@ -855,7 +948,7 @@
       </div>
       <div class="sobre-content">
         <span class="section-label">Sobre o Médico</span>
-        <h2 class="section-title">Dr. Bruno William<br>Lopes de Almeida</h2>
+        <h2 id="sobre-title" class="section-title">Dr. Bruno William<br>Lopes de Almeida</h2>
         <p>Médico especialista em <strong>Alergia e Imunologia Pediátrica</strong>, com residência pela UNIFESP — Escola Paulista de Medicina. Atua com foco na investigação, diagnóstico e acompanhamento de doenças alérgicas em crianças e adultos.</p>
         <p>Atende em São Paulo nas unidades <strong>Livance Tatuapé</strong> e <strong>Livance Ibirapuera</strong>, além de oferecer <strong>teleconsulta</strong> para todo o Brasil.</p>
         <div class="credentials-grid">
@@ -882,12 +975,12 @@
 </section>
 
 <!-- O QUE TRATAMOS -->
-<section id="tratamentos">
+<section id="tratamentos" aria-labelledby="tratamentos-title">
   <div class="section-inner">
     <div class="tratamentos-header">
       <div>
         <span class="section-label">Especialidades</span>
-        <h2 class="section-title">O que Tratamos</h2>
+        <h2 id="tratamentos-title" class="section-title">O que Tratamos</h2>
       </div>
       <p class="section-desc">Diagnóstico e tratamento completo das principais condições alérgicas e imunológicas em crianças e adultos.</p>
     </div>
@@ -895,7 +988,7 @@
 
       <div class="trat-card">
         <div class="trat-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
         </div>
         <h3>Rinite Alérgica</h3>
         <p>Diagnóstico, investigação de alérgenos e tratamento personalizado, incluindo imunoterapia.</p>
@@ -903,7 +996,7 @@
 
       <div class="trat-card">
         <div class="trat-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm0 18a8 8 0 110-16 8 8 0 010 16zm-1-5h2v2h-2v-2zm0-8h2v6h-2V7z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm0 18a8 8 0 110-16 8 8 0 010 16zm-1-5h2v2h-2v-2zm0-8h2v6h-2V7z"/></svg>
         </div>
         <h3>Asma</h3>
         <p>Avaliação completa, controle dos sintomas e acompanhamento especializado para asma em crianças.</p>
@@ -911,7 +1004,7 @@
 
       <div class="trat-card">
         <div class="trat-icon">
-          <svg viewBox="0 0 24 24"><path d="M4.5 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM14.25 8.625a3.375 3.375 0 116.75 0 3.375 3.375 0 01-6.75 0zM1.5 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM17.25 19.128l-.001.144a2.25 2.25 0 01-.233.96 10.088 10.088 0 005.06-1.01.75.75 0 00.42-.643 4.875 4.875 0 00-6.957-4.611 8.586 8.586 0 011.71 5.157v.003z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM14.25 8.625a3.375 3.375 0 116.75 0 3.375 3.375 0 01-6.75 0zM1.5 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM17.25 19.128l-.001.144a2.25 2.25 0 01-.233.96 10.088 10.088 0 005.06-1.01.75.75 0 00.42-.643 4.875 4.875 0 00-6.957-4.611 8.586 8.586 0 011.71 5.157v.003z"/></svg>
         </div>
         <h3>Dermatite Atópica</h3>
         <p>Tratamento especializado para eczemas e dermatites em bebês e crianças.</p>
@@ -919,7 +1012,7 @@
 
       <div class="trat-card">
         <div class="trat-icon">
-          <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
         </div>
         <h3>Alergia Alimentar (APLV)</h3>
         <p>Investigação e manejo completo de alergias a proteínas do leite de vaca e outros alimentos.</p>
@@ -927,7 +1020,7 @@
 
       <div class="trat-card">
         <div class="trat-icon">
-          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
         </div>
         <h3>Imunoterapia</h3>
         <p>Vacinas de dessensibilização para alérgenos inaláveis, alimentares e de insetos.</p>
@@ -935,7 +1028,7 @@
 
       <div class="trat-card">
         <div class="trat-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
         </div>
         <h3>Urticária e Outros</h3>
         <p>Urticária aguda e crônica, erros inatos da imunidade, testes alérgicos (Prick Test) e teleconsulta.</p>
@@ -945,18 +1038,44 @@
   </div>
 </section>
 
+<!-- FAQ -->
+<section id="faq" aria-labelledby="faq-title">
+  <div class="section-inner">
+    <span class="section-label">Perguntas Frequentes</span>
+    <h2 id="faq-title" class="section-title">Dúvidas Comuns</h2>
+    <div class="faq-grid">
+      <details class="faq-item">
+        <summary>Qual a idade mínima para consulta?</summary>
+        <p>Atendo crianças desde recém-nascidos até adolescentes, e também adultos.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Como funciona a teleconsulta?</summary>
+        <p>A consulta online é feita por videochamada segura. Você recebe o link no dia e horário agendado.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Preciso de encaminhamento?</summary>
+        <p>Não. Aceito pacientes direto, sem necessidade de encaminhamento médico.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Quanto tempo dura a consulta?</summary>
+        <p>As consultas duram em média 40 minutos, permitindo investigação completa.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <!-- AGENDAR -->
-<section id="agendar">
+<section id="agendar" aria-labelledby="agendar-title">
   <div class="section-inner">
     <div class="agendar-grid">
       <div class="agendar-left">
         <span class="section-label" style="color:var(--gold)">Agendar Consulta</span>
-        <h2 class="section-title">Atendimento em São Paulo<br>e Online</h2>
+        <h2 id="agendar-title" class="section-title">Atendimento em São Paulo<br>e Online</h2>
         <p class="section-desc">Resposta rápida pela equipe. Escolha a unidade mais próxima ou consulte online.</p>
         <div class="agendar-options">
           <div class="agendar-card">
             <div class="agendar-card-icon">
-              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
             </div>
             <div>
               <h4>Livance Tatuapé</h4>
@@ -965,7 +1084,7 @@
           </div>
           <div class="agendar-card">
             <div class="agendar-card-icon">
-              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
             </div>
             <div>
               <h4>Livance Ibirapuera</h4>
@@ -974,7 +1093,7 @@
           </div>
           <div class="agendar-card">
             <div class="agendar-card-icon">
-              <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8M12 17v4"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8M12 17v4"/></svg>
             </div>
             <div>
               <h4>Teleconsulta Online</h4>
@@ -986,18 +1105,18 @@
       <div class="agendar-right">
         <h3>Agende agora</h3>
         <p>Nosso time responde rapidamente pelo WhatsApp.</p>
-        <a href="https://wa.me/5511920383955?text=Olá%2C+Dr.+Bruno!+Gostaria+de+agendar+uma+consulta." target="_blank" rel="noopener" class="cta-wa">
-          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <a href="https://wa.me/5511920383955?text=Olá%2C+Dr.+Bruno!+Gostaria+de+agendar+uma+consulta." target="_blank" rel="noopener" class="cta-wa" aria-label="Agendar consulta pelo WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Falar pelo WhatsApp
         </a>
         <div class="agendar-divider">ou entre em contato por</div>
         <div class="locais">
           <div class="local-item">
-            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             <span>drbrunoalergoimuno@gmail.com</span>
           </div>
           <div class="local-item">
-            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
             <span>@dr.brunowilliam</span>
           </div>
         </div>
@@ -1007,23 +1126,23 @@
 </section>
 
 <!-- INSTAGRAM CTA -->
-<div class="instagram-section">
+<div class="instagram-section" aria-label="Siga no Instagram">
   <div class="instagram-inner">
     <h2>Conteúdo gratuito sobre alergia infantil</h2>
     <p>
       Dicas, novidades da alergia e imunologia pediátrica e informações para pais.<br />
       Siga o Dr. Bruno no Instagram e fique sempre bem informado.
-      <span class="pulse-dot"></span>
+      <span class="pulse-dot" aria-hidden="true"></span>
     </p>
-    <a href="https://instagram.com/dr.brunowilliam" target="_blank" rel="noopener" class="btn-instagram">
-      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+    <a href="https://instagram.com/dr.brunowilliam" target="_blank" rel="noopener" class="btn-instagram" aria-label="Seguir @dr.brunowilliam no Instagram">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
       Seguir @dr.brunowilliam
     </a>
   </div>
 </div>
 
 <!-- FOOTER -->
-<footer>
+<footer role="contentinfo">
   <div class="footer-inner">
     <div class="footer-brand">
       <img src="/logo-bw.png" alt="Dr. Bruno William" />
@@ -1054,14 +1173,14 @@
 </footer>
 
 <!-- FLOATING SOCIAL -->
-<div class="float-bar">
+<div class="float-bar" aria-label="Links rápidos">
   <a href="https://wa.me/5511920383955?text=Olá%2C+Dr.+Bruno!+Gostaria+de+agendar+uma+consulta." target="_blank" rel="noopener" class="float-btn float-wa" aria-label="WhatsApp">
     <span class="float-tooltip">Agendar pelo WhatsApp</span>
-    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
   <a href="https://instagram.com/dr.brunowilliam" target="_blank" rel="noopener" class="float-btn float-ig" aria-label="Instagram">
     <span class="float-tooltip">@dr.brunowilliam</span>
-    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
   </a>
 </div>
 
@@ -1069,8 +1188,15 @@
   // Mobile menu
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobile-menu');
-  hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
-  function closeMenu() { mobileMenu.classList.remove('open'); }
+  hamburger.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+    hamburger.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+  });
+  function closeMenu() { 
+    mobileMenu.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }
 
   // Active nav on scroll
   const sections = document.querySelectorAll('section[id], div[id]');
