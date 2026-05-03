@@ -402,24 +402,7 @@
       color: var(--gray-mid);
     }
 
-    /* ── TRUST BAR ── */
-    .trust-bar {
-      background: var(--navy);
-      padding: 18px 24px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 32px;
-    }
-    .trust-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: rgba(255,255,255,0.75);
-      font-size: 0.83rem;
-      font-weight: 500;
-    }
-    .trust-item svg { width: 16px; height: 16px; fill: var(--gold); flex-shrink: 0; }
+    
 
     /* ── SECTIONS COMUM ── */
     section { padding: 80px 24px; }
@@ -935,23 +918,81 @@
   </div>
 </section>
 
-<!-- TRUST BAR -->
-<div class="trust-bar" role="list" aria-label="Credenciais e certificações">
-  <div class="trust-item" role="listitem">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-    Especialista ASBAI/AMB
-  </div>
-  <div class="trust-item" role="listitem">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-    Especialista SBP — Pediatria
-  </div>
-  <div class="trust-item" role="listitem">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-    Residência UNIFESP
-  </div>
-  <div class="trust-item" role="listitem">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-    Atendimento Online para todo o Brasil
+<!-- TICKER BAR -->
+<style>
+.ticker-wrapper {
+  background: #0B2545;
+  border-bottom: 1px solid rgba(197,160,89,0.2);
+  overflow: hidden;
+  position: relative;
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+.ticker-wrapper::before,
+.ticker-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+.ticker-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #0B2545, transparent);
+}
+.ticker-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #0B2545, transparent);
+}
+.ticker-track {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: ticker-scroll 35s linear infinite;
+  will-change: transform;
+}
+.ticker-wrapper:hover .ticker-track {
+  animation-play-state: paused;
+}
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 40px;
+  font-size: 0.83rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.8);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.ticker-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: #C5A059;
+  flex-shrink: 0;
+}
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+</style>
+
+<div class="ticker-wrapper">
+  <div class="ticker-track">
+    <span class="ticker-item"><span class="ticker-dot"></span>🫁 Asma</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>🌿 Rinite Alérgica</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>🧴 Dermatite Atópica</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>🛡️ Imunodeficiências</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>💊 Alergia a Medicamentos</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>🍼 Alergia Alimentar · APLV</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>🫁 Asma</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>🌿 Rinite Alérgica</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>🧴 Dermatite Atópica</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>🛡️ Imunodeficiências</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>💊 Alergia a Medicamentos</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>🍼 Alergia Alimentar · APLV</span>
   </div>
 </div>
 
