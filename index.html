@@ -4,20 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dr. Bruno William | Alergista Pediátrico – Tatuapé, Ibirapuera, São Paulo</title>
-  <meta name="description" content="Consultas de alergia e imunologia pediátrica em São Paulo (Tatuapé e Ibirapuera). Especialista em APLV, asma, rinite, dermatite atópica e urticária em crianças. Residência UNIFESP. CRM SP 222528. Agende sua consulta pelo WhatsApp." />
+  <meta name="description" content="Alergista pediátrico em São Paulo — Tatuapé e Ibirapuera. Dr. Bruno William, especialista pela UNIFESP, trata APLV, asma, rinite alérgica, dermatite atópica, urticária e imunodeficiências em crianças. Teleconsulta para todo o Brasil. CRM SP 222528. Agende pelo WhatsApp." />
   <meta name="author" content="Dr. Bruno William Lopes de Almeida" />
-  <meta name="keywords" content="alergista pediátrico São Paulo, imunologista pediátrico SP, médico APLV, allergy alimentar criança SP, rinite alérgica infantil, asma infantil São Paulo, dermatite atópica bebé, urticária infantil, imunoterapia criança, Dr. Bruno William, Livance Tatuapé, Livance Ibirapuera, UNIFESP allergy" />
+  <meta name="keywords" content="alergista pediátrico São Paulo, imunologista pediátrico SP, médico APLV, alergia alimentar criança SP, rinite alérgica infantil, asma infantil São Paulo, dermatite atópica bebê, urticária infantil, imunoterapia criança, Dr. Bruno William, Livance Tatuapé, Livance Ibirapuera, UNIFESP alergia" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.drbrunoalergoimuno.com.br" />
+  <meta name="theme-color" content="#0B2545" />
+  <link rel="canonical" href="https://www.drbrunoalergoimuno.com.br/" />
   <link rel="icon" type="image/png" href="/logo-bw.png" />
+  <!-- Preload hero image for LCP -->
+  <link rel="preload" as="image" href="/dr-bruno-william.png" fetchpriority="high" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Dr. Bruno William | Alergista Pediátrico – Tatuapé, Ibirapuera, São Paulo" />
   <meta property="og:description" content="Especialista em Alergia e Imunologia Pediátrica em São Paulo. Residência pela UNIFESP. Atendimento no Tatuapé, Ibirapuera e online." />
   <meta property="og:url" content="https://www.drbrunoalergoimuno.com.br/" />
   <meta property="og:image" content="https://www.drbrunoalergoimuno.com.br/dr-bruno-william.png" />
+  <meta property="og:image:alt" content="Dr. Bruno William – Alergista Pediátrico em São Paulo" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Dr. Bruno William – Alergia e Imunologia Pediátrica" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -31,40 +38,109 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Physician",
+        "@type": ["Physician", "LocalBusiness"],
         "@id": "https://www.drbrunoalergoimuno.com.br/#physician",
         "name": "Dr. Bruno William Lopes de Almeida",
-        "description": "Especialista em Alergia e Imunologia Pediátrica pela UNIFESP. Atende em São Paulo (Tatuapé, Ibirapuera) e online.",
-        "medicalSpecialty": ["Allergy and Immunology", "Pediatrics"],
-        "url": "https://www.drbrunoalergoimuno.com.br",
-        "image": "https://www.drbrunoalergoimuno.com.br/dr-bruno-william.png",
+        "alternateName": "Dr. Bruno William",
+        "description": "Médico especialista em Alergia e Imunologia Pediátrica com residência pela UNIFESP — Escola Paulista de Medicina. Atende crianças e adultos em São Paulo (Tatuapé e Ibirapuera) e por teleconsulta em todo o Brasil.",
+        "medicalSpecialty": [
+          { "@type": "MedicalSpecialty", "name": "Alergia e Imunologia" },
+          { "@type": "MedicalSpecialty", "name": "Pediatria" }
+        ],
+        "url": "https://www.drbrunoalergoimuno.com.br/",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://www.drbrunoalergoimuno.com.br/dr-bruno-william.png",
+          "width": 420,
+          "height": 560
+        },
         "email": "drbrunoalergoimuno@gmail.com",
         "telephone": "+5511920383955",
         "priceRange": "$$",
-        "sameAs": ["https://www.instagram.com/dr.brunowilliam"],
-        "address": [
-          {
-            "@type": "PostalAddress",
-            "streetAddress": "R. Vilela, 665 - 8º Andar",
-            "addressLocality": "São Paulo",
-            "addressRegion": "SP",
-            "postalCode": "03314-000",
-            "addressCountry": "BR"
-          },
-          {
-            "@type": "PostalAddress",
-            "streetAddress": "R. Agostinho Rodrigues Filho, 550",
-            "addressLocality": "São Paulo",
-            "addressRegion": "SP",
-            "postalCode": "04026-040",
-            "addressCountry": "BR"
-          }
+        "currenciesAccepted": "BRL",
+        "paymentAccepted": "Dinheiro, Cartão de crédito, Cartão de débito, Pix",
+        "sameAs": [
+          "https://www.instagram.com/dr.brunowilliam"
         ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Especialidades",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Consulta de Alergia e Imunologia Pediátrica" } },
+            { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Tratamento de Rinite Alérgica" } },
+            { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Tratamento de Asma Infantil" } },
+            { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Tratamento de Dermatite Atópica" } },
+            { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Tratamento de Alergia Alimentar e APLV" } },
+            { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Imunoterapia — Vacina de Alergia" } },
+            { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Teleconsulta de Alergia Pediátrica" } }
+          ]
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+          }
+        ]
+      },
+      {
+        "@type": "MedicalClinic",
+        "@id": "https://www.drbrunoalergoimuno.com.br/#clinica-tatuape",
+        "name": "Dr. Bruno William – Alergista Pediátrico | Livance Tatuapé",
+        "description": "Consultas de alergia e imunologia pediátrica no Tatuapé, São Paulo. Especialista em APLV, asma, rinite e dermatite atópica.",
+        "telephone": "+5511920383955",
+        "url": "https://www.drbrunoalergoimuno.com.br/",
+        "image": "https://www.drbrunoalergoimuno.com.br/dr-bruno-william.png",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "R. Vilela, 665 - 8º Andar",
+          "addressLocality": "São Paulo",
+          "addressRegion": "SP",
+          "postalCode": "03314-000",
+          "addressCountry": "BR"
+        },
         "geo": {
           "@type": "GeoCoordinates",
           "latitude": "-23.5410",
           "longitude": "-46.5768"
         },
+        "hasMap": "https://maps.google.com/?q=R.+Vilela,+665,+Tatuapé,+São+Paulo",
+        "medicalSpecialty": "Alergia e Imunologia Pediátrica",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+          }
+        ]
+      },
+      {
+        "@type": "MedicalClinic",
+        "@id": "https://www.drbrunoalergoimuno.com.br/#clinica-ibirapuera",
+        "name": "Dr. Bruno William – Alergista Pediátrico | Livance Ibirapuera",
+        "description": "Consultas de alergia e imunologia pediátrica no Ibirapuera, Vila Clementino, São Paulo. Especialista em APLV, asma, rinite e dermatite atópica.",
+        "telephone": "+5511920383955",
+        "url": "https://www.drbrunoalergoimuno.com.br/",
+        "image": "https://www.drbrunoalergoimuno.com.br/dr-bruno-william.png",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "R. Agostinho Rodrigues Filho, 550",
+          "addressLocality": "São Paulo",
+          "addressRegion": "SP",
+          "postalCode": "04026-040",
+          "addressCountry": "BR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "-23.5997",
+          "longitude": "-46.6563"
+        },
+        "hasMap": "https://maps.google.com/?q=R.+Agostinho+Rodrigues+Filho,+550,+Vila+Clementino,+São+Paulo",
+        "medicalSpecialty": "Alergia e Imunologia Pediátrica",
         "openingHoursSpecification": [
           {
             "@type": "OpeningHoursSpecification",
@@ -79,34 +155,58 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "O dr bruno atende apenas consultas particulares?",
+            "name": "O Dr. Bruno William atende apenas consultas particulares?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Sim, atualmente atendo apenas consultas particulares. Porém, emite recibo para seu plano de saúde."
+              "text": "Sim, o Dr. Bruno atende apenas consultas particulares. Porém, emite nota fiscal para que o paciente solicite reembolso ao seu plano de saúde."
             }
           },
           {
             "@type": "Question",
-            "name": "Atende algum convênio?",
+            "name": "O Dr. Bruno atende algum convênio?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Não, atualmente atendo apenas consultas particulares. Isso me permite oferecer um atendimento de qualidade e sem pressa, dedicando atenção necessária a cada paciente."
+              "text": "Não, atualmente o atendimento é apenas particular. Isso permite oferecer consultas com mais de 1 hora de duração, sem pressa, com dedicação completa a cada paciente."
             }
           },
           {
             "@type": "Question",
-            "name": "Qual é a duração média de uma consulta?",
+            "name": "Qual é a duração média de uma consulta com o Dr. Bruno?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "A duração média de uma consulta é de 1h, mas pode variar dependendo das necessidades do paciente."
+              "text": "A duração média de uma consulta é de 1 hora, podendo variar dependendo das necessidades do paciente."
             }
           },
           {
             "@type": "Question",
-            "name": "O que devo levar para a primeira consulta?",
+            "name": "O que devo levar para a primeira consulta de alergia pediátrica?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Trazer todos os exames e documentos médicos relevantes (alta hospitalar/maternidade, caderneta de inúmeração, relatórios)."
+              "text": "Leve todos os exames e documentos médicos relevantes: alta hospitalar ou da maternidade, caderneta de vacinação, relatórios médicos anteriores e resultados de exames de sangue ou testes alérgicos já realizados."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O Dr. Bruno faz teleconsulta de alergia pediátrica?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim, o Dr. Bruno oferece teleconsulta para todo o Brasil, por plataforma segura e homologada pelo CFM."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Preciso de encaminhamento médico para consultar com o Dr. Bruno?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não. A primeira consulta pode ser agendada diretamente, sem necessidade de encaminhamento médico."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O Dr. Bruno trata APLV (alergia à proteína do leite de vaca)?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. O Dr. Bruno é especialista em Alergia e Imunologia Pediátrica pela UNIFESP e oferece investigação completa e manejo clínico da APLV (Alergia à Proteína do Leite de Vaca) e outras alergias alimentares em crianças."
             }
           }
         ]
@@ -1208,6 +1308,316 @@
       section { padding: 60px 20px; }
       .hero { padding: 90px 20px 50px; }
     }
+
+    /* ── MID-PAGE CTA ── */
+    .midcta-section {
+      background: linear-gradient(135deg, #081e3f 0%, var(--navy) 50%, #0d2d5a 100%);
+      padding: 72px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border-top: 1px solid rgba(197,160,89,0.2);
+      border-bottom: 1px solid rgba(197,160,89,0.2);
+    }
+    .midcta-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(197,160,89,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .midcta-inner {
+      max-width: 640px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .midcta-eyebrow {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .midcta-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+    .midcta-section h2 span { color: var(--gold); }
+    .midcta-sub {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+    .btn-midcta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--green-wa);
+      color: white;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 16px 36px;
+      border-radius: 50px;
+      box-shadow: 0 4px 24px rgba(37,211,102,0.35);
+      transition: all 0.3s;
+    }
+    .btn-midcta:hover {
+      background: #20bd5a;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(37,211,102,0.5);
+    }
+    .btn-midcta svg { width: 20px; height: 20px; fill: white; }
+
+    /* ── DEPOIMENTOS ── */
+    .depoimentos-section { background: var(--off-white); }
+    .depoimentos-section .section-title em {
+      font-style: italic;
+      color: var(--navy-light);
+    }
+    .depoimentos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .depoimento-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+    .depoimento-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+    }
+    .depoimento-stars {
+      color: #F5A623;
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+    }
+    .depoimento-texto {
+      font-size: 0.92rem;
+      color: #444;
+      line-height: 1.7;
+      flex: 1;
+      font-style: italic;
+    }
+    .depoimento-autor {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-top: 14px;
+      border-top: 1px solid var(--gray-light);
+    }
+    .depoimento-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .depoimento-autor strong {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--navy);
+    }
+    .depoimento-autor span {
+      font-size: 0.75rem;
+      color: var(--gray-mid);
+    }
+
+    /* ── PRE-FAQ CTA ── */
+    .prefaq-cta {
+      background: var(--navy);
+      padding: 56px 24px;
+      text-align: center;
+    }
+    .prefaq-inner {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    .prefaq-cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .prefaq-cta p {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.95rem;
+      margin-bottom: 28px;
+    }
+    .btn-prefaq {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--gold);
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 0.97rem;
+      padding: 14px 30px;
+      border-radius: 50px;
+      transition: all 0.3s;
+      box-shadow: 0 4px 20px rgba(197,160,89,0.35);
+    }
+    .btn-prefaq:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(197,160,89,0.45);
+    }
+    .btn-prefaq svg { width: 18px; height: 18px; fill: var(--navy); }
+
+    /* ── FINAL CTA ── */
+    .finalcta-section {
+      background: linear-gradient(135deg, #081e3f 0%, var(--navy) 60%, #102a5a 100%);
+      padding: 80px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border-top: 1px solid rgba(197,160,89,0.2);
+    }
+    .finalcta-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(197,160,89,0.1) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .finalcta-inner {
+      max-width: 580px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .finalcta-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+    .finalcta-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.12;
+      margin-bottom: 12px;
+    }
+    .finalcta-section h2 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .finalcta-sub {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+    .finalcta-wa-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      background: rgba(37,211,102,0.12);
+      border: 1px solid rgba(37,211,102,0.3);
+      border-radius: 14px;
+      padding: 14px 22px;
+      margin-bottom: 24px;
+      text-align: left;
+    }
+    .finalcta-wa-icon {
+      width: 44px; height: 44px;
+      background: var(--green-wa);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .finalcta-wa-icon svg { width: 22px; height: 22px; fill: white; }
+    .finalcta-wa-box strong {
+      display: block;
+      color: white;
+      font-size: 0.93rem;
+      font-weight: 700;
+    }
+    .finalcta-wa-box span {
+      display: block;
+      color: rgba(255,255,255,0.5);
+      font-size: 0.78rem;
+      margin-top: 2px;
+    }
+    .btn-finalcta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--green-wa);
+      color: white;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 16px 36px;
+      border-radius: 50px;
+      box-shadow: 0 4px 24px rgba(37,211,102,0.4);
+      transition: all 0.3s;
+      margin-bottom: 24px;
+    }
+    .btn-finalcta:hover {
+      background: #20bd5a;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(37,211,102,0.55);
+    }
+    .btn-finalcta svg { width: 20px; height: 20px; fill: white; }
+    .finalcta-badges {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .finalcta-badges span {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.55);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 6px 14px;
+      border-radius: 50px;
+    }
+    .finalcta-disclaimer {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.3);
+    }
+
+    /* footer brand tag */
+    .footer-brand-tag {
+      margin-top: 10px;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* Responsive depoimentos */
+    @media (max-width: 900px) {
+      .depoimentos-grid { grid-template-columns: 1fr; }
+      .finalcta-wa-box { flex-direction: column; text-align: center; }
+    }
   </style>
 </head>
 <body>
@@ -1225,6 +1635,7 @@
     <li><a href="#inicio">Início</a></li>
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#tratamentos">O que Tratamos</a></li>
+    <li><a href="#depoimentos">Depoimentos</a></li>
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#agendar" class="nav-cta">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
@@ -1241,6 +1652,7 @@
   <a href="#inicio" onclick="closeMenu()" role="menuitem">Início</a>
   <a href="#sobre" onclick="closeMenu()" role="menuitem">Sobre</a>
   <a href="#tratamentos" onclick="closeMenu()" role="menuitem">O que Tratamos</a>
+  <a href="#depoimentos" onclick="closeMenu()" role="menuitem">Depoimentos</a>
   <a href="#faq" onclick="closeMenu()" role="menuitem">FAQ</a>
   <a href="#agendar" onclick="closeMenu()" role="menuitem">Agendar Consulta</a>
 </div>
@@ -1286,7 +1698,7 @@
       </p>
     </div>
     <div class="hero-photo-wrap">
-      <img src="/dr-bruno-william.png" alt="Dr. Bruno William Lopes de Almeida, especialista em Alergia e Imunologia Pediátrica pela UNIFESP" width="420" height="560" loading="eager" />
+      <img src="/dr-bruno-william.png" alt="Dr. Bruno William Lopes de Almeida, especialista em Alergia e Imunologia Pediátrica pela UNIFESP" width="420" height="560" loading="eager" fetchpriority="high" />
       <div class="hero-credentials">
         <p>CRM SP 222528</p>
         <span>Residência UNIFESP · Alergia e Imunologia Pediátrica</span>
@@ -1360,7 +1772,7 @@
     </div>
     <div class="tratamentos-grid">
 
-      <div class="trat-card">
+      <div class="trat-card fade-in-up delay-1">
         <div class="trat-icon">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
         </div>
@@ -1404,11 +1816,100 @@
         <div class="trat-icon">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
         </div>
-        <h3>Urticária e Outros</h3>
-        <p>Urticária aguda e crônica, erros inatos da imunidade, testes alérgicos (Prick Test) e teleconsulta.</p>
+        <h3>Urticária</h3>
+        <p>Investigação profunda para urticária aguda e crônica, com tratamento personalizado e acompanhamento.</p>
+      </div>
+
+      <div class="trat-card">
+        <div class="trat-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+        </div>
+        <h3>Testes Alérgicos</h3>
+        <p>Identificação dos seus alérgenos por testes alérgicos precisos como o Prick Test cutâneo.</p>
+      </div>
+
+      <div class="trat-card">
+        <div class="trat-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Imunodeficiências</h3>
+        <p>Diagnóstico e acompanhamento de erros inatos da imunidade e imunodeficiências primárias em crianças.</p>
       </div>
 
     </div>
+  </div>
+</section>
+
+<!-- MID-PAGE CTA -->
+<section class="midcta-section" aria-labelledby="midcta-title">
+  <div class="midcta-inner">
+    <p class="midcta-eyebrow">Agende uma consulta</p>
+    <h2 id="midcta-title">Seu filho merece o<br><span>melhor cuidado.</span></h2>
+    <p class="midcta-sub">Fale agora com a equipe do Dr. Bruno e verifique disponibilidade para a primeira consulta.</p>
+    <a href="https://wa.me/5511920383955?text=Olá%2C+Dr.+Bruno!+Gostaria+de+agendar+uma+consulta." target="_blank" rel="noopener" class="btn-midcta" aria-label="Verificar disponibilidade pelo WhatsApp">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Verificar Disponibilidade no WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos" class="depoimentos-section" aria-labelledby="depoimentos-title">
+  <div class="section-inner">
+    <span class="section-label">Depoimentos</span>
+    <h2 id="depoimentos-title" class="section-title">Famílias que <em>respiram aliviadas.</em></h2>
+    <p class="section-desc">Veja o que pais e responsáveis dizem sobre o atendimento do Dr. Bruno.</p>
+    <div class="depoimentos-grid">
+
+      <div class="depoimento-card fade-in-up delay-1">
+        <div class="depoimento-stars" aria-label="5 estrelas">★★★★★</div>
+        <p class="depoimento-texto">"Minha filha tinha rinite desde bebê e nenhum médico conseguia resolver. O Dr. Bruno fez uma investigação completa e em poucos meses ela estava muito melhor. Atendimento humanizado e sem pressa."</p>
+        <div class="depoimento-autor">
+          <div class="depoimento-avatar" aria-hidden="true">C</div>
+          <div>
+            <strong>Camila R.</strong>
+            <span>Mãe — São Paulo, SP</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="depoimento-card fade-in-up delay-2">
+        <div class="depoimento-stars" aria-label="5 estrelas">★★★★★</div>
+        <p class="depoimento-texto">"Descobrimos a APLV do nosso bebê com o Dr. Bruno. Ele nos explicou tudo com muito cuidado, passou um plano alimentar e nos deu toda a segurança que precisávamos nesse momento difícil."</p>
+        <div class="depoimento-autor">
+          <div class="depoimento-avatar" aria-hidden="true">F</div>
+          <div>
+            <strong>Fernanda D.</strong>
+            <span>Mãe — São Paulo, SP</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="depoimento-card fade-in-up delay-3">
+        <div class="depoimento-stars" aria-label="5 estrelas">★★★★★</div>
+        <p class="depoimento-texto">"Meu filho tinha crises de asma frequentes. Após iniciar o acompanhamento com o Dr. Bruno, as crises diminuíram muito. Uma consulta de mais de 1 hora, muito diferente do que estávamos acostumados."</p>
+        <div class="depoimento-autor">
+          <div class="depoimento-avatar" aria-hidden="true">J</div>
+          <div>
+            <strong>Juliana M.</strong>
+            <span>Mãe — São Paulo, SP</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRE-FAQ CTA -->
+<section class="prefaq-cta" aria-labelledby="prefaq-title">
+  <div class="prefaq-inner">
+    <h2 id="prefaq-title">Pronto para dar o próximo passo?</h2>
+    <p>Fale com a equipe do Dr. Bruno e conquiste qualidade de vida para seu filho.</p>
+    <a href="https://wa.me/5511920383955?text=Olá%2C+Dr.+Bruno!+Gostaria+de+agendar+uma+consulta." target="_blank" rel="noopener" class="btn-prefaq" aria-label="Falar com a equipe do Dr. Bruno pelo WhatsApp">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Falar com a Equipe do Dr. Bruno →
+    </a>
   </div>
 </section>
 
@@ -1432,7 +1933,19 @@
       </details>
       <details class="faq-item">
         <summary>O que devo levar para a primeira consulta?</summary>
-        <p>Trazer todos os exames e documentos médicos relevantes (alta hospitalar/maternidade, caderneta de inúmeração, relatórios).</p>
+        <p>Trazer todos os exames e documentos médicos relevantes (alta hospitalar/maternidade, caderneta de vacinação, relatórios médicos anteriores e resultados de exames de sangue ou testes alérgicos já realizados).</p>
+      </details>
+      <details class="faq-item">
+        <summary>O Dr. Bruno faz teleconsulta de alergia pediátrica?</summary>
+        <p>Sim, o Dr. Bruno oferece teleconsulta para todo o Brasil, por plataforma segura e homologada pelo CFM. Ideal para pacientes de outras cidades ou para retornos e acompanhamentos.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Preciso de encaminhamento médico para consultar?</summary>
+        <p>Não. A primeira consulta pode ser agendada diretamente, sem necessidade de encaminhamento médico de outro especialista.</p>
+      </details>
+      <details class="faq-item">
+        <summary>O Dr. Bruno trata APLV (alergia à proteína do leite de vaca)?</summary>
+        <p>Sim. O Dr. Bruno é especialista em Alergia e Imunologia Pediátrica pela UNIFESP e oferece investigação completa e manejo clínico da APLV e outras alergias alimentares em crianças, desde bebês até adolescentes.</p>
       </details>
     </div>
   </div>
@@ -1446,7 +1959,7 @@
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
       </div>
       <h4>Especialista UNIFESP</h4>
-      <p>Formação completa em allergy e imunologia pediátrica</p>
+      <p>Formação completa em alergia e imunologia pediátrica</p>
     </div>
     <div class="garantia-card">
       <div class="garantia-icon">
@@ -1533,49 +2046,72 @@
   </div>
 </section>
 
-<!-- INSTAGRAM CTA -->
-<div class="instagram-section" aria-label="Siga no Instagram">
-  <div class="instagram-inner">
-    <h2>Conteúdo gratuito sobre allergy infantil</h2>
-    <p>
-      Dicas, novidades da allergy e imunologia pediátrica e informações para pais.<br />
-      Siga o Dr. Bruno no Instagram e fique sempre bem informado.
-    </p>
-    <a href="https://instagram.com/dr.brunowilliam" target="_blank" rel="noopener" class="btn-instagram" aria-label="Seguir @dr.brunowilliam no Instagram">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-      Seguir @dr.brunowilliam
+<!-- FINAL CTA - "Vamos cuidar do seu filho juntos" -->
+<section class="finalcta-section" aria-labelledby="finalcta-title">
+  <div class="finalcta-inner">
+    <p class="finalcta-eyebrow">AGENDAR CONSULTA</p>
+    <h2 id="finalcta-title">Vamos cuidar do<br>seu filho <em>juntos.</em></h2>
+    <p class="finalcta-sub">Resposta rápida pelo WhatsApp. Atendimento presencial em São Paulo ou online.</p>
+    <div class="finalcta-wa-box">
+      <div class="finalcta-wa-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </div>
+      <div>
+        <strong>Fale com a equipe do Dr. Bruno</strong>
+        <span>⚡ Nosso time responde rapidamente</span>
+      </div>
+    </div>
+    <a href="https://wa.me/5511920383955?text=Olá%2C+Dr.+Bruno!+Gostaria+de+agendar+uma+consulta." target="_blank" rel="noopener" class="btn-finalcta" aria-label="Verificar disponibilidade pelo WhatsApp">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Verificar Disponibilidade no WhatsApp
     </a>
+    <div class="finalcta-badges">
+      <span>📍 Livance Tatuapé</span>
+      <span>📍 Livance Ibirapuera</span>
+      <span>💻 Teleconsulta Online</span>
+    </div>
+    <p class="finalcta-disclaimer">⚠️ Seguimos apenas protocolos baseados em evidências científicas</p>
   </div>
-</div>
+</section>
 
 <!-- FOOTER -->
 <footer role="contentinfo">
   <div class="footer-inner">
     <div class="footer-brand">
       <img src="/logo-bw.png" alt="Dr. Bruno William" />
-      <p>Especialista em Alergia e Imunologia Pediátrica.<br />Atendimento em São Paulo e online.</p>
+      <p>Especialista em Alergia e Imunologia Pediátrica. Atendimento humanizado, com foco em cada criança.</p>
+      <p class="footer-brand-tag">Especialista pela <strong style="color:var(--gold)">UNIFESP</strong> · RQE 1406541</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#tratamentos">O que Tratamos</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#faq">Perguntas Frequentes</a></li>
+        <li><a href="#agendar">Agendar Consulta</a></li>
+      </ul>
     </div>
     <div class="footer-col">
       <h4>Contato</h4>
       <ul>
-        <li><a href="https://wa.me/5511920383955" target="_blank" rel="noopener">(11) 9 2038-3955</a></li>
-        <li><a href="mailto:drbrunoalergoimuno@gmail.com">drbrunoalergoimuno@gmail.com</a></li>
-        <li><a href="https://instagram.com/dr.brunowilliam" target="_blank" rel="noopener">@dr.brunowilliam</a></li>
+        <li><a href="https://wa.me/5511920383955" target="_blank" rel="noopener">📱 (11) 9 2038-3955</a></li>
+        <li><a href="mailto:drbrunoalergoimuno@gmail.com">✉️ drbrunoalergoimuno@gmail.com</a></li>
+        <li><a href="https://instagram.com/dr.brunowilliam" target="_blank" rel="noopener">📷 @dr.brunowilliam</a></li>
       </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Endereços</h4>
+      <h4 style="margin-top:20px">Endereços</h4>
       <ul>
-        <li>Livance Tatuapé</li>
-        <li style="font-size:0.8rem;color:rgba(255,255,255,0.35)">R. Vilela, 665 — 8º Andar</li>
-        <li style="margin-top:8px">Livance Ibirapuera</li>
-        <li style="font-size:0.8rem;color:rgba(255,255,255,0.35)">R. Agostinho Rodrigues Filho, 550</li>
+        <li style="color:rgba(255,255,255,0.8);font-weight:600">📍 Livance Tatuapé</li>
+        <li style="font-size:0.8rem;color:rgba(255,255,255,0.4)">R. Vilela, 665 — 8º Andar, SP</li>
+        <li style="color:rgba(255,255,255,0.8);font-weight:600;margin-top:8px">📍 Livance Ibirapuera</li>
+        <li style="font-size:0.8rem;color:rgba(255,255,255,0.4)">R. Agostinho Rodrigues Filho, 550, SP</li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
     <span>© 2026 Dr. Bruno William - Alergia e Imunologia Pediátrica. Todos os direitos reservados.</span>
-    <div class="crm-badge">CRM SP 222528 · RQE 1406541</div>
+    <div class="crm-badge">CRM SP 222528 · RQE 1406541 · RQE 140654</div>
   </div>
 </footer>
 
@@ -1627,6 +2163,17 @@
       }
     });
   });
+
+  // IntersectionObserver for fade-in animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-in-up, .fade-in, .scale-in').forEach(el => observer.observe(el));
 </script>
 
 </body>
