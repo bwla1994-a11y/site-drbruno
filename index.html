@@ -6,14 +6,14 @@
   <title>Dr. Bruno William | Alergista Pediátrico – Tatuapé, Ibirapuera, São Paulo</title>
   <meta name="description" content="Consultas de alergia e imunologia pediátrica em São Paulo (Tatuapé e Ibirapuera). Especialista em APLV, asma, rinite, dermatite atópica e urticária em crianças. Residência UNIFESP. CRM SP 222528. Agende sua consulta pelo WhatsApp." />
   <meta name="author" content="Dr. Bruno William Lopes de Almeida" />
-  <meta name="keywords" content="alergista pediátrico São Paulo, imunologista pediátrico SP, médico APLV, alergia alimentar criança SP, rinite alérgica infantil, asma infantil São Paulo, dermatite atópica bebé, urticária infantil, imunoterapia criança, Dr. Bruno William, Livance Tatuapé, Livance Ibirapuera, UNIFESP alergia" />
+  <meta name="keywords" content="alergista pediátrico São Paulo, imunologista pediátrico SP, médico APLV, allergy alimentar criança SP, rinite alérgica infantil, asma infantil São Paulo, dermatite atópica bebé, urticária infantil, imunoterapia criança, Dr. Bruno William, Livance Tatuapé, Livance Ibirapuera, UNIFESP allergy" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.drbrunoalergoimuno.com.br" />
   <link rel="icon" type="image/png" href="/logo-bw.png" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Dr. Bruno William | Alergista Pediátrico – Tatuapé, Ibirapuera, São Paulo" />
-  <meta property="og:description" content="Especialista em Alergia e Imunologia Pediátrica em São Paulo. Residência pela UNIFESP. Atendimento no Tatuapé, Ibirapuera e online. CRM SP 222528." />
+  <meta property="og:description" content="Especialista em Alergia e Imunologia Pediátrica em São Paulo. Residência pela UNIFESP. Atendimento no Tatuapé, Ibirapuera e online." />
   <meta property="og:url" content="https://www.drbrunoalergoimuno.com.br/" />
   <meta property="og:image" content="https://www.drbrunoalergoimuno.com.br/dr-bruno-william.png" />
   <meta property="og:type" content="website" />
@@ -79,34 +79,34 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "Qual a idade mínima para consulta?",
+            "name": "O dr bruno atende apenas consultas particulares?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Atendo crianças desde recém-nascidos até adolescentes, e também adultos."
+              "text": "Sim, atualmente atendo apenas consultas particulares. Porém, emite recibo para seu plano de saúde."
             }
           },
           {
             "@type": "Question",
-            "name": "Como funciona a teleconsulta?",
+            "name": "Atende algum convênio?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "A consulta online é feita por videochamada segura. Você recebe o link no dia e horário agendado."
+              "text": "Não, atualmente atendo apenas consultas particulares. Isso me permite oferecer um atendimento de qualidade e sem pressa, dedicando atenção necessária a cada paciente."
             }
           },
           {
             "@type": "Question",
-            "name": "Preciso de encaminhamento?",
+            "name": "Qual é a duração média de uma consulta?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Não. Aceito pacientes direto, sem necessidade de encaminhamento médico."
+              "text": "A duração média de uma consulta é de 1h, mas pode variar dependendo das necessidades do paciente."
             }
           },
           {
             "@type": "Question",
-            "name": "Quanto tempo dura a consulta?",
+            "name": "O que devo levar para a primeira consulta?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "As consultas duram em média 40 minutos, permitindo investigação completa."
+              "text": "Trazer todos os exames e documentos médicos relevantes (alta hospitalar/maternidade, caderneta de inúmeração, relatórios)."
             }
           }
         ]
@@ -146,11 +146,47 @@
       --green-wa: #25D366;
     }
 
+    /* ── ANIMAÇÕES GLOBAIS ── */
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-in-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .fade-in {
+      opacity: 0;
+      transition: opacity 0.8s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+    }
+    .scale-in {
+      opacity: 0;
+      transform: scale(0.9);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .scale-in.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Stagger delays */
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.4s; }
+    .delay-5 { transition-delay: 0.5s; }
+    .delay-6 { transition-delay: 0.6s; }
+
     body {
       font-family: 'Inter', sans-serif;
       color: var(--text);
       background: var(--white);
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     img { display: block; max-width: 100%; height: auto; }
@@ -162,15 +198,19 @@
       top: 0; left: 0; right: 0;
       z-index: 1000;
       background: rgba(11, 37, 69, 0.96);
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
       padding: 0 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       height: 72px;
       border-bottom: 1px solid rgba(197,160,89,0.2);
+      transition: all 0.3s ease;
     }
-
+    nav.scrolled {
+      height: 64px;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+    }
     .nav-brand {
       display: flex;
       align-items: center;
@@ -179,6 +219,10 @@
     .nav-brand img {
       height: 38px;
       width: auto;
+      transition: height 0.3s;
+    }
+    nav.scrolled .nav-brand img {
+      height: 32px;
     }
     .nav-brand-text {
       display: flex;
@@ -197,7 +241,6 @@
       font-weight: 400;
       letter-spacing: 0.02em;
     }
-
     .nav-links {
       display: flex;
       align-items: center;
@@ -208,9 +251,21 @@
       font-size: 0.9rem;
       font-weight: 500;
       color: rgba(255,255,255,0.85);
-      transition: color 0.2s;
+      transition: color 0.3s;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gold);
+      transition: width 0.3s;
     }
     .nav-links a:hover { color: var(--gold-light); }
+    .nav-links a:hover::after { width: 100%; }
 
     .nav-cta {
       display: flex;
@@ -222,9 +277,13 @@
       font-size: 0.88rem !important;
       padding: 10px 20px;
       border-radius: 50px;
-      transition: background 0.2s, transform 0.2s !important;
+      transition: all 0.3s;
     }
-    .nav-cta:hover { background: var(--gold-light) !important; transform: translateY(-1px); }
+    .nav-cta:hover { 
+      background: var(--gold-light) !important; 
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(197,160,89,0.4);
+    }
 
     .nav-hamburger {
       display: none;
@@ -244,7 +303,7 @@
       transition: 0.3s;
     }
 
-    /* ── HERO IMPROVED ── */
+    /* ── HERO ── */
     .hero {
       min-height: 100vh;
       background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, #2A5298 100%);
@@ -253,6 +312,29 @@
       padding: 100px 24px 60px;
       position: relative;
       overflow: hidden;
+    }
+    /* Pattern de fundo sutil */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23C5A059' fill-opacity='0.04'%3E%3Cpath d='M40 40L50 20H30L40 40zM20 40L30 20H10L20 40zM60 40L70 20H50L60 40zM40 60L50 40H30L40 60zM20 60L30 40H10L20 60zM60 60L70 40H50L60 60z'/%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.5;
+    }
+    /* Shine effect */
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, transparent 30%, rgba(255,255,255,0.03) 50%, transparent 70%);
+      animation: shine 15s infinite linear;
+    }
+    @keyframes shine {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
     .hero-inner {
       max-width: 1100px;
@@ -277,12 +359,17 @@
       padding: 6px 16px;
       border-radius: 50px;
       margin-bottom: 24px;
+      animation: fadeInUp 0.8s ease-out both;
     }
     .hero-badge::before {
       content: '';
       width: 7px; height: 7px;
       background: var(--gold);
       border-radius: 50%;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     .hero h1 {
       font-family: 'Playfair Display', serif;
@@ -291,6 +378,7 @@
       color: var(--white);
       line-height: 1.12;
       margin-bottom: 16px;
+      animation: fadeInUp 0.8s ease-out 0.1s both;
     }
     .hero h1 span { color: var(--gold); }
     .hero-subtitle {
@@ -299,40 +387,43 @@
       margin-bottom: 32px;
       max-width: 500px;
       line-height: 1.7;
+      animation: fadeInUp 0.8s ease-out 0.2s both;
     }
     .hero-subtitle strong { color: var(--gold-light); font-weight: 600; }
     
-    /* Social Proof Bar */
-    .hero-social-proof {
+    /* Diferenciais */
+    .hero-diferenciais {
       display: flex;
-      align-items: center;
+      flex-wrap: wrap;
       gap: 16px;
       margin-bottom: 28px;
-      padding: 16px 20px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 14px;
-      width: fit-content;
+      animation: fadeInUp 0.8s ease-out 0.3s both;
     }
-    .hero-social-proof-avatars {
+    .hero-diferencial {
       display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 18px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 14px;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.85);
+      transition: all 0.3s;
+      cursor: pointer;
     }
-    .hero-social-proof-avatars img {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      border: 2px solid var(--navy);
-      margin-left: -10px;
+    .hero-diferencial:hover {
+      background: rgba(197,160,89,0.15);
+      border-color: rgba(197,160,89,0.4);
+      transform: translateY(-2px);
     }
-    .hero-social-proof-avatars img:first-child {
-      margin-left: 0;
+    .hero-diferencial svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--green-wa);
+      flex-shrink: 0;
     }
-    .hero-social-proof-text {
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.75);
-      line-height: 1.4;
-    }
-    .hero-social-proof-text strong {
+    .hero-diferencial strong {
       color: var(--white);
       font-weight: 600;
     }
@@ -342,6 +433,7 @@
       flex-wrap: wrap;
       gap: 14px;
       margin-bottom: 24px;
+      animation: fadeInUp 0.8s ease-out 0.4s both;
     }
     .btn-primary {
       display: inline-flex;
@@ -353,8 +445,23 @@
       font-size: 1rem;
       padding: 16px 32px;
       border-radius: 50px;
-      transition: all 0.25s;
+      transition: all 0.3s;
       box-shadow: 0 4px 20px rgba(197,160,89,0.35);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+    .btn-primary:hover::before {
+      left: 100%;
     }
     .btn-primary:hover { 
       background: var(--gold-light); 
@@ -367,7 +474,7 @@
       background: linear-gradient(135deg, #00c853, #00e676) !important;
       color: #003d1a !important;
       font-weight: 800 !important;
-      animation: pulse-agendar 2s infinite;
+      animation: pulse-agendar 2s infinite, fadeInUp 0.8s ease-out 0.4s both;
       box-shadow: 0 4px 20px rgba(0,200,83,0.35);
     }
     .btn-agendar:hover, .btn-primary.btn-agendar:hover {
@@ -391,26 +498,21 @@
       font-size: 0.95rem;
       padding: 14px 26px;
       border-radius: 50px;
-      transition: all 0.25s;
+      transition: all 0.3s;
     }
     .btn-ghost:hover { 
       border-color: var(--gold-light); 
       background: rgba(197,160,89,0.1); 
+      transform: translateY(-2px);
     }
 
-    .hero-bottom-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
     .hero-note {
       font-size: 0.82rem;
       color: rgba(255,255,255,0.6);
       display: flex;
       align-items: center;
       gap: 8px;
+      animation: fadeInUp 0.8s ease-out 0.5s both;
     }
     .hero-note svg {
       width: 16px;
@@ -418,8 +520,14 @@
       fill: var(--green-wa);
     }
 
+    /* Photo com shimmer */
     .hero-photo-wrap {
       position: relative;
+      animation: fadeInRight 1s ease-out 0.3s both;
+    }
+    @keyframes fadeInRight {
+      from { opacity: 0; transform: translateX(30px); }
+      to { opacity: 1; transform: translateX(0); }
     }
     .hero-photo-wrap::before {
       content: '';
@@ -427,6 +535,14 @@
       inset: -16px;
       border: 1.5px solid rgba(197,160,89,0.25);
       border-radius: 24px;
+    }
+    .hero-photo-wrap::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%);
+      pointer-events: none;
     }
     .hero-photo-wrap img {
       width: 100%;
@@ -443,6 +559,7 @@
       border-radius: 14px;
       padding: 14px 18px;
       box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+      animation: fadeInUp 0.6s ease-out 0.6s both;
     }
     .hero-credentials p {
       font-size: 0.75rem;
@@ -574,6 +691,12 @@
       border: 1px solid rgba(197,160,89,0.2);
       border-radius: 12px;
       padding: 14px 16px;
+      transition: all 0.3s;
+    }
+    .credential-card:hover {
+      border-color: rgba(197,160,89,0.5);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(197,160,89,0.15);
     }
     .credential-card .label {
       font-size: 0.7rem;
@@ -609,13 +732,30 @@
       border: 1px solid transparent;
       border-radius: 16px;
       padding: 28px 24px;
-      transition: all 0.3s;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    .trat-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s;
     }
     .trat-card:hover {
       border-color: var(--gold);
-      box-shadow: 0 12px 40px rgba(197,160,89,0.15);
-      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(197,160,89,0.2);
+      transform: translateY(-6px);
+    }
+    .trat-card:hover::before {
+      transform: scaleX(1);
     }
     .trat-icon {
       width: 48px; height: 48px;
@@ -629,6 +769,7 @@
     }
     .trat-card:hover .trat-icon {
       background: var(--gold);
+      transform: scale(1.1);
     }
     .trat-icon svg { width: 24px; height: 24px; stroke: var(--gold); fill: none; stroke-width: 1.8; transition: all 0.3s; }
     .trat-card:hover .trat-icon svg {
@@ -658,10 +799,11 @@
       border-radius: 12px;
       padding: 18px 20px;
       border: 1px solid transparent;
-      transition: all 0.2s;
+      transition: all 0.3s;
     }
     .faq-item:hover {
       border-color: var(--gold-light);
+      transform: translateX(4px);
     }
     .faq-item summary {
       font-weight: 600;
@@ -678,13 +820,68 @@
       font-size: 1.4rem;
       color: var(--gold);
       font-weight: 400;
+      transition: transform 0.3s;
     }
-    .faq-item[open] summary::after { content: '−'; }
+    .faq-item[open] summary::after { content: '−'; transform: rotate(180deg); }
     .faq-item p {
       margin-top: 12px;
       color: var(--gray-mid);
       font-size: 0.9rem;
       line-height: 1.6;
+    }
+
+    /* ── GARANTIAS ── */
+    .garantias-section {
+      background: var(--navy);
+      padding: 64px 24px;
+    }
+    .garantias-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .garantia-card {
+      text-align: center;
+      padding: 24px;
+    }
+    .garantia-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(197,160,89,0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      transition: all 0.3s;
+    }
+    .garantia-card:hover .garantia-icon {
+      background: var(--gold);
+      transform: scale(1.1);
+    }
+    .garantia-icon svg {
+      width: 28px;
+      height: 28px;
+      stroke: var(--gold);
+      fill: none;
+      stroke-width: 1.8;
+      transition: all 0.3s;
+    }
+    .garantia-card:hover .garantia-icon svg {
+      stroke: var(--navy);
+    }
+    .garantia-card h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .garantia-card p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.5;
     }
 
     /* ── AGENDAR ── */
@@ -696,6 +893,36 @@
       grid-template-columns: 1fr 1fr;
       gap: 48px;
       align-items: center;
+    }
+    .agendar-note-particular {
+      background: rgba(197,160,89,0.12);
+      border: 1px solid rgba(197,160,89,0.3);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      transition: all 0.3s;
+    }
+    .agendar-note-particular:hover {
+      background: rgba(197,160,89,0.18);
+      transform: translateY(-2px);
+    }
+    .agendar-note-particular svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--gold);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .agendar-note-particular p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.5;
+    }
+    .agendar-note-particular strong {
+      color: var(--gold-light);
     }
     .agendar-options {
       display: flex;
@@ -711,13 +938,13 @@
       display: flex;
       align-items: flex-start;
       gap: 16px;
-      transition: all 0.2s;
+      transition: all 0.3s;
       cursor: pointer;
     }
     .agendar-card:hover {
       background: rgba(197,160,89,0.1);
       border-color: rgba(197,160,89,0.4);
-      transform: translateX(4px);
+      transform: translateX(8px);
     }
     .agendar-card-icon {
       width: 42px; height: 42px;
@@ -727,8 +954,13 @@
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
+      transition: all 0.3s;
     }
-    .agendar-card-icon svg { width: 20px; height: 20px; stroke: var(--gold); fill: none; stroke-width: 1.8; }
+    .agendar-card:hover .agendar-card-icon {
+      background: var(--gold);
+    }
+    .agendar-card-icon svg { width: 20px; height: 20px; stroke: var(--gold); fill: none; stroke-width: 1.8; transition: all 0.3s; }
+    .agendar-card:hover .agendar-card-icon svg { stroke: var(--navy); }
     .agendar-card h4 { font-size: 0.92rem; font-weight: 700; color: var(--white); margin-bottom: 3px; }
     .agendar-card p { font-size: 0.82rem; color: rgba(255,255,255,0.55); }
     .agendar-right {
@@ -754,13 +986,17 @@
       font-size: 1rem;
       padding: 16px 28px;
       border-radius: 50px;
-      transition: all 0.2s;
+      transition: all 0.3s;
       box-shadow: 0 4px 20px rgba(37,211,102,0.3);
       margin-bottom: 16px;
       width: 100%;
       justify-content: center;
     }
-    .cta-wa:hover { background: #20bd5a; transform: translateY(-2px); }
+    .cta-wa:hover { 
+      background: #20bd5a; 
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(37,211,102,0.4);
+    }
     .cta-wa svg { width: 22px; height: 22px; fill: white; }
     .agendar-divider {
       text-align: center;
@@ -775,22 +1011,19 @@
       align-items: flex-start;
       font-size: 0.83rem;
       color: rgba(255,255,255,0.65);
+      transition: color 0.3s;
     }
+    .local-item:hover { color: var(--gold-light); }
     .local-item svg { width: 16px; height: 16px; stroke: var(--gold); fill: none; stroke-width: 1.8; flex-shrink: 0; margin-top: 2px; }
 
     /* ── INSTAGRAM CTA ── */
     .instagram-section {
-      background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, #1e3a5f 100%);
       padding: 64px 24px;
       text-align: center;
       position: relative;
       overflow: hidden;
-    }
-    .instagram-section::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.18);
+      border-top: 1px solid rgba(197,160,89,0.15);
     }
     .instagram-inner {
       position: relative;
@@ -806,7 +1039,7 @@
       margin-bottom: 12px;
     }
     .instagram-inner p {
-      color: rgba(255,255,255,0.88);
+      color: rgba(255,255,255,0.85);
       font-size: 0.97rem;
       margin-bottom: 28px;
       line-height: 1.65;
@@ -815,27 +1048,21 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      background: var(--white);
-      color: #d6249f;
+      background: var(--gold);
+      color: var(--navy);
       font-weight: 700;
       font-size: 1rem;
       padding: 14px 32px;
       border-radius: 50px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-      transition: all 0.2s;
+      box-shadow: 0 4px 20px rgba(197,160,89,0.35);
+      transition: all 0.3s;
     }
-    .btn-instagram:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.25); }
-    .btn-instagram svg { width: 20px; height: 20px; fill: #d6249f; }
-    .pulse-dot {
-      display: inline-block;
-      width: 9px; height: 9px;
-      background: #ff3b5c;
-      border-radius: 50%;
-      margin-left: 6px;
-      animation: pulse 1.6s ease-in-out infinite;
-      vertical-align: middle;
+    .btn-instagram:hover { 
+      background: var(--gold-light); 
+      transform: translateY(-2px); 
+      box-shadow: 0 8px 28px rgba(197,160,89,0.45); 
     }
-    @keyframes pulse { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.5);opacity:0.6} }
+    .btn-instagram svg { width: 20px; height: 20px; fill: var(--navy); }
 
     /* ── FOOTER ── */
     footer {
@@ -855,8 +1082,8 @@
     .footer-col h4 { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
     .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
     .footer-col ul li { font-size: 0.85rem; }
-    .footer-col ul a { color: rgba(255,255,255,0.55); transition: color 0.2s; }
-    .footer-col ul a:hover { color: var(--gold-light); }
+    .footer-col ul a { color: rgba(255,255,255,0.55); transition: all 0.3s; }
+    .footer-col ul a:hover { color: var(--gold-light); transform: translateX(4px); }
     .footer-bottom {
       max-width: 1100px;
       margin: 32px auto 0;
@@ -869,7 +1096,7 @@
       gap: 12px;
       font-size: 0.78rem;
     }
-    .footer-bottom a { color: rgba(255,255,255,0.4); transition: color 0.2s; }
+    .footer-bottom a { color: rgba(255,255,255,0.4); transition: color 0.3s; }
     .footer-bottom a:hover { color: var(--gold-light); }
     .crm-badge {
       display: flex;
@@ -891,41 +1118,45 @@
       z-index: 9999;
     }
     .float-btn {
-      width: 56px; height: 56px;
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-      transition: all 0.2s;
+      transition: all 0.3s;
       position: relative;
     }
-    .float-btn:hover { transform: translateY(-3px) scale(1.07); box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
-    .float-btn svg { width: 26px; height: 26px; fill: white; }
+    .float-btn:hover { 
+      transform: translateY(-3px) scale(1.1); 
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25); 
+    }
+    .float-btn svg { width: 22px; height: 22px; fill: white; }
     .float-wa { background: #25D366; }
-    .float-ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+    .float-ig { background: var(--navy-light); }
     .float-tooltip {
       position: absolute;
-      right: 66px;
+      right: 58px;
       top: 50%;
       transform: translateY(-50%);
       background: var(--navy);
       color: white;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 600;
-      padding: 6px 12px;
-      border-radius: 8px;
+      padding: 6px 10px;
+      border-radius: 6px;
       white-space: nowrap;
       opacity: 0;
       pointer-events: none;
-      transition: opacity 0.2s;
+      transition: all 0.3s;
     }
     .float-tooltip::after {
       content: '';
       position: absolute;
       left: 100%; top: 50%;
       transform: translateY(-50%);
-      border: 6px solid transparent;
+      border: 5px solid transparent;
       border-left-color: var(--navy);
     }
     .float-btn:hover .float-tooltip { opacity: 1; }
@@ -949,7 +1180,7 @@
       color: rgba(255,255,255,0.85);
       padding: 12px 0;
       border-bottom: 1px solid rgba(255,255,255,0.07);
-      transition: color 0.2s;
+      transition: color 0.3s;
     }
     .mobile-menu a:last-child { border-bottom: none; }
     .mobile-menu a:hover { color: var(--gold-light); }
@@ -958,8 +1189,8 @@
     @media (max-width: 900px) {
       .hero-inner { grid-template-columns: 1fr; gap: 40px; }
       .hero-photo-wrap { max-width: 300px; margin: 0 auto; }
-      .hero-social-proof { width: 100%; justify-content: center; }
-      .hero-bottom-row { flex-direction: column; align-items: flex-start; }
+      .hero-diferenciais { justify-content: center; }
+      .garantias-grid { grid-template-columns: 1fr; }
       .sobre-grid { grid-template-columns: 1fr; }
       .sobre-photo { max-width: 300px; }
       .tratamentos-grid { grid-template-columns: 1fr 1fr; }
@@ -967,6 +1198,8 @@
       .footer-inner { grid-template-columns: 1fr 1fr; }
       .nav-links { display: none; }
       .nav-hamburger { display: flex; }
+      .float-bar { bottom: 16px; right: 16px; }
+      .float-btn { width: 44px; height: 44px; }
     }
     @media (max-width: 600px) {
       .tratamentos-grid { grid-template-columns: 1fr; }
@@ -1023,15 +1256,19 @@
         <strong>UNIFESP</strong> com mais de 15 anos de experiência.
       </p>
       
-      <!-- Social Proof -->
-      <div class="hero-social-proof">
-        <div class="hero-social-proof-avatars">
-          <img src="/dr-bruno-william.png" alt="Paciente" />
-          <img src="/dr-bruno-william.png" alt="Paciente" />
-          <img src="/dr-bruno-william.png" alt="Paciente" />
+      <!-- Diferenciais -->
+      <div class="hero-diferenciais">
+        <div class="hero-diferencial">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          Consulta particular
         </div>
-        <div class="hero-social-proof-text">
-          <strong>+500 famílias</strong><br />atendidas com sucesso
+        <div class="hero-diferencial">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          Emite nota para reembolso
+        </div>
+        <div class="hero-diferencial">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          Consulta de 1h em média
         </div>
       </div>
       
@@ -1043,16 +1280,10 @@
         <a href="#sobre" class="btn-ghost">Conheça o Dr. Bruno</a>
       </div>
       
-      <div class="hero-bottom-row">
-        <p class="hero-note">
-          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-          Primeira consulta sem encaminhamento
-        </p>
-        <p class="hero-note">
-          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-          Teleconsulta para todo o Brasil
-        </p>
-      </div>
+      <p class="hero-note">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        Primeira consulta sem encaminhamento
+      </p>
     </div>
     <div class="hero-photo-wrap">
       <img src="/dr-bruno-william.png" alt="Dr. Bruno William Lopes de Almeida, especialista em Alergia e Imunologia Pediátrica pela UNIFESP" width="420" height="560" loading="eager" />
@@ -1067,7 +1298,7 @@
 <!-- TICKER BAR -->
 <div class="ticker-wrapper">
   <div class="ticker-track">
-    <span class="ticker-item"><span class="ticker-dot"></span>🫁 Asma</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>�� Asma</span>
     <span class="ticker-item"><span class="ticker-dot"></span>🌿 Rinite Alérgica</span>
     <span class="ticker-item"><span class="ticker-dot"></span>🧴 Dermatite Atópica</span>
     <span class="ticker-item"><span class="ticker-dot"></span>🛡️ Imunodeficiências</span>
@@ -1188,21 +1419,48 @@
     <h2 id="faq-title" class="section-title">Dúvidas Comuns</h2>
     <div class="faq-grid">
       <details class="faq-item">
-        <summary>Qual a idade mínima para consulta?</summary>
-        <p>Atendo crianças desde recém-nascidos até adolescentes, e também adultos.</p>
+        <summary>O dr bruno atende apenas consultas particulares?</summary>
+        <p>Sim, atualmente atendo apenas consultas particulares. Porém, emite recibo para seu plano de saúde.</p>
       </details>
       <details class="faq-item">
-        <summary>Como funciona a teleconsulta?</summary>
-        <p>A consulta online é feita por videochamada segura. Você recebe o link no dia e horário agendado.</p>
+        <summary>Atende algum convênio?</summary>
+        <p>Não, atualmente atendo apenas consultas particulares. Isso me permite oferecer um atendimento de qualidade e sem pressa, dedicando atenção necessária a cada paciente.</p>
       </details>
       <details class="faq-item">
-        <summary>Preciso de encaminhamento?</summary>
-        <p>Não. Aceito pacientes direto, sem necessidade de encaminhamento médico.</p>
+        <summary>Qual é a duração média de uma consulta?</summary>
+        <p>A duração média de uma consulta é de 1h, mas pode variar dependendo das necessidades do paciente.</p>
       </details>
       <details class="faq-item">
-        <summary>Quanto tempo dura a consulta?</summary>
-        <p>As consultas duram em média 40 minutos, permitindo investigação completa.</p>
+        <summary>O que devo levar para a primeira consulta?</summary>
+        <p>Trazer todos os exames e documentos médicos relevantes (alta hospitalar/maternidade, caderneta de inúmeração, relatórios).</p>
       </details>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTIAS -->
+<section class="garantias-section" aria-labelledby="garantias-title">
+  <div class="garantias-grid">
+    <div class="garantia-card">
+      <div class="garantia-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+      </div>
+      <h4>Especialista UNIFESP</h4>
+      <p>Formação completa em allergy e imunologia pediátrica</p>
+    </div>
+    <div class="garantia-card">
+      <div class="garantia-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+      </div>
+      <h4>Consulta de 1h</h4>
+      <p>Tempo dedicado para atenção completa</p>
+    </div>
+    <div class="garantia-card">
+      <div class="garantia-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+      </div>
+      <h4>Nota Fiscal</h4>
+      <p>Recibo para reembolso do convênio</p>
     </div>
   </div>
 </section>
@@ -1215,6 +1473,13 @@
         <span class="section-label" style="color:var(--gold)">Agendar Consulta</span>
         <h2 id="agendar-title" class="section-title">Atendimento em São Paulo<br>e Online</h2>
         <p class="section-desc">Resposta rápida pela equipe. Escolha a unidade mais próxima ou consulte online.</p>
+        
+        <!-- Nota sobre particular -->
+        <div class="agendar-note-particular">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+          <p>Atendo apenas <strong>consultas particulares</strong>. Emito nota fiscal para reembolso do seu convênio.</p>
+        </div>
+        
         <div class="agendar-options">
           <div class="agendar-card">
             <div class="agendar-card-icon">
@@ -1271,11 +1536,10 @@
 <!-- INSTAGRAM CTA -->
 <div class="instagram-section" aria-label="Siga no Instagram">
   <div class="instagram-inner">
-    <h2>Conteúdo gratuito sobre alergia infantil</h2>
+    <h2>Conteúdo gratuito sobre allergy infantil</h2>
     <p>
-      Dicas, novidades da alergia e imunologia pediátrica e informações para pais.<br />
+      Dicas, novidades da allergy e imunologia pediátrica e informações para pais.<br />
       Siga o Dr. Bruno no Instagram e fique sempre bem informado.
-      <span class="pulse-dot" aria-hidden="true"></span>
     </p>
     <a href="https://instagram.com/dr.brunowilliam" target="_blank" rel="noopener" class="btn-instagram" aria-label="Seguir @dr.brunowilliam no Instagram">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
@@ -1318,7 +1582,7 @@
 <!-- FLOATING SOCIAL -->
 <div class="float-bar" aria-label="Links rápidos">
   <a href="https://wa.me/5511920383955?text=Olá%2C+Dr.+Bruno!+Gostaria+de+agendar+uma+consulta." target="_blank" rel="noopener" class="float-btn float-wa" aria-label="WhatsApp">
-    <span class="float-tooltip">Agendar pelo WhatsApp</span>
+    <span class="float-tooltip">Agendar</span>
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
   <a href="https://instagram.com/dr.brunowilliam" target="_blank" rel="noopener" class="float-btn float-ig" aria-label="Instagram">
@@ -1328,6 +1592,16 @@
 </div>
 
 <script>
+  // Nav scroll effect
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 50) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  });
+
   // Mobile menu
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobile-menu');
