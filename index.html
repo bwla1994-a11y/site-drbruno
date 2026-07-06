@@ -40,7 +40,104 @@
   {"@type":"PostalAddress","streetAddress":"R. Vilela, 665 — 8º Andar","addressLocality":"São Paulo","addressRegion":"SP","addressCountry":"BR"},
   {"@type":"PostalAddress","streetAddress":"R. Agostinho Rodrigues Filho, 550","addressLocality":"São Paulo","addressRegion":"SP","addressCountry":"BR"}
  ],
- "sameAs": ["https://instagram.com/dr.brunowilliam"]
+ "sameAs": ["https://instagram.com/dr.brunowilliam"],
+ "aggregateRating": {
+   "@type": "AggregateRating",
+   "ratingValue": "5",
+   "reviewCount": "3"
+ },
+ "review": [
+   {
+     "@type": "Review",
+     "author": {"@type": "Person", "name": "Camila R."},
+     "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+     "reviewBody": "Minha filha tinha rinite desde bebê e nenhum médico conseguia resolver. O Dr. Bruno fez uma investigação completa e em poucos meses ela estava muito melhor. Atendimento humanizado e sem pressa."
+   },
+   {
+     "@type": "Review",
+     "author": {"@type": "Person", "name": "Fernanda D."},
+     "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+     "reviewBody": "Descobrimos a APLV do nosso bebê com o Dr. Bruno. Ele nos explicou tudo com muito cuidado, passou um plano alimentar e nos deu toda a segurança que precisávamos nesse momento difícil."
+   },
+   {
+     "@type": "Review",
+     "author": {"@type": "Person", "name": "Juliana M."},
+     "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+     "reviewBody": "Meu filho tinha crises de asma frequentes. Após iniciar o acompanhamento com o Dr. Bruno, as crises diminuíram muito. Uma consulta de mais de 1 hora, muito diferente do que estávamos acostumados."
+   }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "O Dr. Bruno atende convênio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não, atualmente o atendimento é apenas particular. Isso permite consultas longas e sem pressa, com a atenção que cada paciente precisa. É emitida nota fiscal para você solicitar reembolso ao seu plano de saúde."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qual o valor da consulta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A consulta particular custa R$ 500. É emitida nota fiscal para você solicitar reembolso ao seu plano de saúde. Fale pelo WhatsApp para confirmar valores de retorno e teleconsulta."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qual é a duração média da consulta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Em média 1 hora, podendo variar conforme as necessidades de cada paciente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O que devo levar para a primeira consulta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Todos os exames e documentos médicos relevantes: alta hospitalar ou da maternidade, caderneta de vacinação, relatórios médicos anteriores e resultados de exames de sangue ou testes alérgicos já realizados."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O Dr. Bruno faz teleconsulta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim, para todo o Brasil, por plataforma segura e homologada pelo CFM. Ideal para pacientes de outras cidades ou para retornos e acompanhamentos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Preciso de encaminhamento para agendar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. A primeira consulta pode ser agendada diretamente, sem necessidade de encaminhamento de outro médico."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O Dr. Bruno trata APLV (alergia à proteína do leite de vaca)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. O Dr. Bruno oferece investigação completa e manejo clínico da APLV e de outras alergias alimentares, desde bebês até adolescentes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Atende adultos também?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. O foco principal é o público pediátrico, mas adultos com doenças alérgicas e imunológicas também são atendidos."
+      }
+    }
+  ]
 }
 </script>
 <style>
@@ -310,6 +407,7 @@ footer a:hover{color:#fff}
     <nav class="nav-links">
       <a href="#sobre">Sobre</a>
       <a href="#tratamentos">O que Trato</a>
+      <a href="/servicos">Serviços</a>
       <a href="#consulta">Como Funciona</a>
       <a href="#depoimentos">Depoimentos</a>
       <a href="#faq">FAQ</a>
@@ -323,6 +421,7 @@ footer a:hover{color:#fff}
   <nav class="mobile-menu">
     <a href="#sobre" onclick="this.parentElement.classList.remove('open')">Sobre o Dr. Bruno</a>
     <a href="#tratamentos" onclick="this.parentElement.classList.remove('open')">O que Trato</a>
+    <a href="/servicos" onclick="this.parentElement.classList.remove('open')">Serviços</a>
     <a href="#consulta" onclick="this.parentElement.classList.remove('open')">Como Funciona a Consulta</a>
     <a href="#depoimentos" onclick="this.parentElement.classList.remove('open')">Depoimentos</a>
     <a href="#faq" onclick="this.parentElement.classList.remove('open')">Perguntas Frequentes</a>
@@ -349,7 +448,7 @@ footer a:hover{color:#fff}
         </a>
         <a class="btn btn-ghost" href="#sobre">Conheça o Dr. Bruno</a>
       </div>
-      <p class="hero-note hi hi-6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Protocolos baseados em evidências científicas</p>
+      <p class="hero-note hi hi-6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Investigação com testes alérgicos e anamnese detalhada</p>
     </div>
     <div class="hero-photo hi hi-7">
       <img src="img/dr-bruno-hero.webp" srcset="img/dr-bruno-hero-sm.webp 520w, img/dr-bruno-hero.webp 900w" sizes="(max-width:900px) 100vw, 480px" alt="Dr. Bruno William, alergista pediátrico, sorrindo em consultório infantil" width="900" height="1214" fetchpriority="high">
@@ -374,7 +473,7 @@ footer a:hover{color:#fff}
       <h2>Dr. Bruno William<br>Lopes de Almeida</h2>
       <p class="lead">A história do Dr. Bruno começa em <b>Teresina, no Piauí</b>, onde se formou em Medicina e presidiu a Liga de Pediatria — foi ali que ele soube que a vida dele seria cuidar de crianças. Com o diploma na mão, atravessou o país para se formar nas escolas mais exigentes da especialidade: a residência em <b>Pediatria no Hospital Infantil Cândido Fontoura</b> e a especialização em <b>Alergia e Imunologia Pediátrica na UNIFESP — Escola Paulista de Medicina</b>, serviço de referência nacional.</p>
       <p class="lead" style="margin-top:12px">Foi nos plantões de pronto-socorro infantil que a alergia o escolheu: crianças voltando repetidas vezes com crises de asma, reações na pele e alergias alimentares — e pais exaustos, sem respostas. O Dr. Bruno decidiu ser o médico que investiga até o fim. Por isso as consultas duram <b>cerca de 1 hora</b>: tempo de ouvir a história completa, examinar com calma e sair com um plano claro.</p>
-      <p class="lead" style="margin-top:12px">Hoje atende crianças e adultos nas unidades <b>Livance Tatuapé</b> e <b>Livance Ibirapuera</b>, além de <b>teleconsulta para todo o Brasil</b>, sempre com protocolos baseados em evidências científicas.</p>
+      <p class="lead" style="margin-top:12px">Hoje atende crianças e adultos nas unidades <b>Livance Tatuapé</b> e <b>Livance Ibirapuera</b>, além de <b>teleconsulta para todo o Brasil</b>, sempre com investigação baseada em testes alérgicos e anamnese detalhada.</p>
       <div class="cred-grid" data-stagger>
         <div class="cred"><small>Registro</small><b>CRM-SP 222528</b></div>
         <div class="cred"><small>RQE Alergia e Imunologia</small><b>1406541</b></div>
@@ -394,7 +493,7 @@ footer a:hover{color:#fff}
       <div class="t-item rv-l"><small>2020 · Graduação</small><h3>Graduação em Medicina</h3><p>UNINOVAFAPI — Teresina, PI. Presidente da Liga de Pediatria e do Centro Acadêmico de Medicina durante a graduação.</p></div>
       <div class="t-item rv-l"><small>2024 · Residência Médica</small><h3>Residência em Pediatria</h3><p>Hospital Infantil Cândido Fontoura — São Paulo, SP · RQE 140654</p></div>
       <div class="t-item rv-l"><small>2026 · Especialização</small><h3>Residência em Alergia e Imunologia Pediátrica — UNIFESP</h3><p>Escola Paulista de Medicina, serviço de referência terciária na especialidade. Testes cutâneos, provocações orais, imunoterapia e imunobiológicos · RQE 1406541</p></div>
-      <div class="t-item rv-l"><small>Produção científica</small><h3>Trabalho apresentado na ASBAI</h3><p>"Odisseia Diagnóstica dos Erros Inatos da Imunidade" — Congresso da Associação Brasileira de Alergia e Imunologia, 2023 e 2025.</p></div>
+      <div class="t-item rv-l"><small>Produção científica</small><h3>Trabalho apresentado na ASBAI</h3><p>"Odisseia Diagnóstica dos Erros Inatos da Imunidade" — Congresso da Associação Brasileira de Alergia e Imunologia, 2025.</p></div>
       <div class="t-item rv-l"><small>Atualmente</small><h3>Consultório em São Paulo e teleconsulta</h3><p>Atendimento de crianças e adultos com doenças alérgicas e imunológicas nas unidades Tatuapé e Ibirapuera. Também atua como coordenador médico de pronto-socorro infantil na Rede D'Or São Luiz.</p></div>
     </div>
   </div>
@@ -406,14 +505,14 @@ footer a:hover{color:#fff}
     <h2 class="rv">O que trato</h2>
     <p class="lead rv">Diagnóstico e tratamento completo das principais condições alérgicas e imunológicas em crianças e adultos.</p>
     <div class="treat-grid" data-stagger>
-      <a class="tcard rv" href="/rinite-alergica-infantil.html"><div class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c4-2 7-6 7-11V6l-7-3-7 3v5c0 5 3 9 7 11z" opacity=".35"/><path d="M8 12c1.5 0 1.5-2 3-2s1.5 2 3 2 1.5-2 3-2"/></svg></div><h3>Rinite Alérgica</h3><p>Diagnóstico, investigação de alérgenos e tratamento personalizado, incluindo imunoterapia.</p></a>
-      <a class="tcard rv" href="/asma-infantil.html"><div class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v9m0 0c0 3-2 5-4.5 5S3 15 3 12.5 5 8 7.5 8M12 12c0 3 2 5 4.5 5s4.5-2 4.5-4.5S19 8 16.5 8"/></svg></div><h3>Asma</h3><p>Avaliação completa, controle dos sintomas e acompanhamento especializado para asma em crianças.</p></a>
-      <a class="tcard rv" href="/dermatite-atopica-bebe-crianca.html"><div class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" opacity=".35"/><path d="M8 9h.01M12 8h.01M16 10h.01M9 14h.01M14 14.5h.01"/></svg></div><h3>Dermatite Atópica</h3><p>Tratamento especializado para eczemas e dermatites em bebês e crianças.</p></a>
-      <a class="tcard rv" href="/aplv-alergia-proteina-leite-vaca.html"><div class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2h8M9 2v5L4 18a3 3 0 0 0 3 4h10a3 3 0 0 0 3-4L15 7V2"/><path d="M7 14h10" opacity=".5"/></svg></div><h3>Alergia Alimentar · APLV</h3><p>Investigação e manejo completo de alergias às proteínas do leite de vaca e outros alimentos.</p></a>
-      <a class="tcard rv" href="/imunoterapia-vacina-para-alergia.html"><div class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m18 2 4 4-9.5 9.5a3 3 0 0 1-2 .9l-3 .1.1-3a3 3 0 0 1 .9-2L18 2z"/><path d="m14 6 4 4" opacity=".5"/><path d="M6 18l-2.5 2.5" opacity=".5"/></svg></div><h3>Imunoterapia</h3><p>Vacinas de dessensibilização para alérgenos inaláveis, alimentares e de insetos.</p></a>
-      <a class="tcard rv" href="/urticaria-infantil.html"><div class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div><h3>Urticária</h3><p>Investigação profunda para urticária aguda e crônica, com tratamento e acompanhamento.</p></a>
-      <a class="tcard rv" href="/teste-alergico-prick-test.html"><div class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6v5l4 9a3 3 0 0 1-3 4H8a3 3 0 0 1-3-4l4-9V3z"/><path d="M7 14h10" opacity=".5"/></svg></div><h3>Testes Alérgicos</h3><p>Identificação dos alérgenos por testes precisos, como o Prick Test cutâneo.</p></a>
-      <a class="tcard rv" href="/imunodeficiencia-infantil.html"><div class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4" opacity=".7"/></svg></div><h3>Imunodeficiências</h3><p>Diagnóstico e acompanhamento de erros inatos da imunidade em crianças.</p></a>
+      <a class="tcard rv" href="/rinite-alergica-infantil"><div class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c4-2 7-6 7-11V6l-7-3-7 3v5c0 5 3 9 7 11z" opacity=".35"/><path d="M8 12c1.5 0 1.5-2 3-2s1.5 2 3 2 1.5-2 3-2"/></svg></div><h3>Rinite Alérgica</h3><p>Diagnóstico, investigação de alérgenos e tratamento personalizado, incluindo imunoterapia.</p></a>
+      <a class="tcard rv" href="/asma-infantil"><div class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v9m0 0c0 3-2 5-4.5 5S3 15 3 12.5 5 8 7.5 8M12 12c0 3 2 5 4.5 5s4.5-2 4.5-4.5S19 8 16.5 8"/></svg></div><h3>Asma</h3><p>Avaliação completa, controle dos sintomas e acompanhamento especializado para asma em crianças.</p></a>
+      <a class="tcard rv" href="/dermatite-atopica-bebe-crianca"><div class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" opacity=".35"/><path d="M8 9h.01M12 8h.01M16 10h.01M9 14h.01M14 14.5h.01"/></svg></div><h3>Dermatite Atópica</h3><p>Tratamento especializado para eczemas e dermatites em bebês e crianças.</p></a>
+      <a class="tcard rv" href="/aplv-alergia-proteina-leite-vaca"><div class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2h8M9 2v5L4 18a3 3 0 0 0 3 4h10a3 3 0 0 0 3-4L15 7V2"/><path d="M7 14h10" opacity=".5"/></svg></div><h3>Alergia Alimentar · APLV</h3><p>Investigação e manejo completo de alergias às proteínas do leite de vaca e outros alimentos.</p></a>
+      <a class="tcard rv" href="/imunoterapia-vacina-para-alergia"><div class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m18 2 4 4-9.5 9.5a3 3 0 0 1-2 .9l-3 .1.1-3a3 3 0 0 1 .9-2L18 2z"/><path d="m14 6 4 4" opacity=".5"/><path d="M6 18l-2.5 2.5" opacity=".5"/></svg></div><h3>Imunoterapia</h3><p>Vacinas de dessensibilização para alérgenos inaláveis, alimentares e de insetos.</p></a>
+      <a class="tcard rv" href="/urticaria-infantil"><div class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div><h3>Urticária</h3><p>Investigação profunda para urticária aguda e crônica, com tratamento e acompanhamento.</p></a>
+      <a class="tcard rv" href="/teste-alergico-prick-test"><div class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6v5l4 9a3 3 0 0 1-3 4H8a3 3 0 0 1-3-4l4-9V3z"/><path d="M7 14h10" opacity=".5"/></svg></div><h3>Testes Alérgicos</h3><p>Identificação dos alérgenos por testes precisos, como o Prick Test cutâneo.</p></a>
+      <a class="tcard rv" href="/imunodeficiencia-infantil"><div class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4" opacity=".7"/></svg></div><h3>Imunodeficiências</h3><p>Diagnóstico e acompanhamento de erros inatos da imunidade em crianças.</p></a>
     </div>
   </div>
 </section>
@@ -424,7 +523,7 @@ footer a:hover{color:#fff}
     <h2 class="rv">Uma consulta <em class="gold-i">sem pressa</em>, do primeiro contato ao acompanhamento</h2>
     <div class="steps" data-stagger>
       <div class="step rv"><h3>Contato pelo WhatsApp</h3><p>Você fala com a equipe do Dr. Bruno, tira dúvidas e escolhe a unidade e o melhor horário.</p></div>
-      <div class="step rv"><h3>Consulta de 1 hora</h3><p>Escuta completa da história do seu filho, exame físico detalhado e análise de exames anteriores.</p></div>
+      <div class="step rv"><h3>Consulta de 1 hora</h3><p>Anamnese detalhada de sintomas, histórico familiar de alergia e exposição ambiental, exame físico completo e análise de exames anteriores.</p></div>
       <div class="step rv"><h3>Investigação e diagnóstico</h3><p>Quando necessário, testes alérgicos e exames direcionados para identificar a causa com precisão.</p></div>
       <div class="step rv"><h3>Plano e acompanhamento</h3><p>Tratamento personalizado, orientações por escrito e acompanhamento próximo da evolução.</p></div>
     </div>
@@ -477,6 +576,7 @@ footer a:hover{color:#fff}
     <h2>Dúvidas comuns</h2></div>
     <div class="faq rv">
       <details><summary>O Dr. Bruno atende convênio?</summary><p>Não, atualmente o atendimento é apenas particular. Isso permite consultas longas e sem pressa, com a atenção que cada paciente precisa. É emitida nota fiscal para você solicitar reembolso ao seu plano de saúde.</p></details>
+      <details><summary>Qual o valor da consulta?</summary><p>A consulta particular custa R$ 500. É emitida nota fiscal para você solicitar reembolso ao seu plano de saúde. Fale pelo WhatsApp para confirmar valores de retorno e teleconsulta.</p></details>
       <details><summary>Qual é a duração média da consulta?</summary><p>Em média 1 hora, podendo variar conforme as necessidades de cada paciente.</p></details>
       <details><summary>O que devo levar para a primeira consulta?</summary><p>Todos os exames e documentos médicos relevantes: alta hospitalar ou da maternidade, caderneta de vacinação, relatórios médicos anteriores e resultados de exames de sangue ou testes alérgicos já realizados.</p></details>
       <details><summary>O Dr. Bruno faz teleconsulta?</summary><p>Sim, para todo o Brasil, por plataforma segura e homologada pelo CFM. Ideal para pacientes de outras cidades ou para retornos e acompanhamentos.</p></details>
@@ -526,7 +626,7 @@ footer a:hover{color:#fff}
   <div class="wrap f-grid">
     <div class="f-brand">
       <b>Dr. Bruno William</b>
-      <p>Especialista em Alergia e Imunologia Pediátrica. Atendimento humanizado, com foco em cada criança e protocolos baseados em evidências.</p>
+      <p>Especialista em Alergia e Imunologia Pediátrica. Consultas de 1 hora, com investigação por testes alérgicos e anamnese detalhada para cada criança.</p>
       <p style="margin-top:10px;color:var(--gold-soft)">Residência UNIFESP · CRM-SP 222528</p>
     </div>
     <div>
