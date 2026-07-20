@@ -273,6 +273,11 @@ header{position:sticky;top:0;z-index:50;background:rgba(7,26,50,.9);backdrop-fil
 .traj::before{content:"";position:absolute;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(201,162,75,.13),transparent 65%);top:-200px;right:-140px}
 .traj h2{color:#fff}
 .traj .lead{color:#B9C7DA}
+.traj-grid{display:grid;gap:36px;position:relative;z-index:1}
+.traj-photo{position:relative;max-width:320px;margin-inline:auto;width:100%}
+.traj-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:top;border-radius:22px;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.traj-photo::before{content:"";position:absolute;inset:14px -12px -12px 14px;border:1.5px solid rgba(201,162,75,.4);border-radius:22px;z-index:-1}
+@media(min-width:900px){.traj-grid{grid-template-columns:.85fr 1.15fr;align-items:start}}
 .timeline{margin-top:42px;position:relative;padding-left:26px}
 .timeline::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:1.5px;background:linear-gradient(var(--gold),rgba(201,162,75,.12))}
 .t-item{position:relative;padding:0 0 32px 20px}
@@ -487,16 +492,19 @@ footer a:hover{color:#fff}
 </section>
 
 <section class="traj">
-  <div class="wrap">
-    <span class="kicker rv">Trajetória</span>
-    <h2 class="rv">Formação construída nas <em class="gold-i">principais escolas</em> de medicina do país</h2>
-    <p class="lead rv">Cada etapa da formação foi dedicada a um objetivo: cuidar de crianças com alergias e dos seus pais com técnica, ciência e acolhimento.</p>
+  <div class="wrap traj-grid">
+    <div class="traj-photo rv-l"><img src="img/dr-bruno-formacao.webp" alt="Dr. Bruno William Lopes de Almeida, alergista e imunologista pediátrico, em ambiente profissional" loading="lazy" width="860" height="1075"></div>
+    <div class="rv-r">
+    <span class="kicker">Trajetória</span>
+    <h2>Formação construída nas <em class="gold-i">principais escolas</em> de medicina do país</h2>
+    <p class="lead">Cada etapa da formação foi dedicada a um objetivo: cuidar de crianças com alergias e dos seus pais com técnica, ciência e acolhimento.</p>
     <div class="timeline">
       <div class="t-item rv-l"><small>2020 · Graduação</small><h3>Graduação em Medicina</h3><p>UNINOVAFAPI — Teresina, PI. Presidente da Liga de Pediatria e do Centro Acadêmico de Medicina durante a graduação.</p></div>
       <div class="t-item rv-l"><small>2024 · Residência Médica</small><h3>Residência em Pediatria</h3><p>Hospital Infantil Cândido Fontoura — São Paulo, SP · RQE 140654</p></div>
       <div class="t-item rv-l"><small>2026 · Especialização</small><h3>Residência em Alergia e Imunologia Pediátrica — UNIFESP</h3><p>Escola Paulista de Medicina, serviço de referência terciária na especialidade. Testes cutâneos, provocações orais, imunoterapia e imunobiológicos · RQE 1406541</p></div>
       <div class="t-item rv-l"><small>Produção científica</small><h3>Trabalho apresentado na ASBAI</h3><p>"Odisseia Diagnóstica dos Erros Inatos da Imunidade" — Congresso da Associação Brasileira de Alergia e Imunologia, 2025.</p></div>
       <div class="t-item rv-l"><small>Atualmente</small><h3>Consultório em São Paulo e teleconsulta</h3><p>Atendimento de crianças e adultos com doenças alérgicas e imunológicas nas unidades Tatuapé e Ibirapuera. Também atua como coordenador médico de pronto-socorro infantil na Rede D'Or São Luiz.</p></div>
+    </div>
     </div>
   </div>
 </section>
@@ -684,5 +692,13 @@ if (matchMedia('(min-width:900px) and (prefers-reduced-motion:no-preference)').m
   }, {passive: true});
 }
 </script>
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+<script>
+  window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
 </body>
 </html>

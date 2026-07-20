@@ -1,20 +1,25 @@
 # Site Dr. Bruno William — Deploy no Vercel
 
 ## Estrutura
+Site 100% HTML estático (sem framework/build step). Cada página é um arquivo `.html` independente, com CSS inline no `<head>` e schema.org (JSON-LD) por página.
+
 ```
 /
-├── index.html        ← página principal
-├── vercel.json       ← configuração do Vercel (SPA routing + cache)
-└── assets/
-    ├── index-Cf9v3xtf.js        ← app principal
-    ├── index-CzV0F3rh.css       ← estilos
-    ├── ui-vendor-DsDsQ0yK.js    ← lib UI
-    ├── utils-vendor-DqmDTpxI.js ← utilitários
-    ├── query-vendor-E4HuqEnl.js ← react-query
-    ├── router-vendor-B5MdcdXU.js← react-router
-    ├── dr-bruno-william.jpg     ← foto do médico
-    ├── hero-cover.jpg           ← imagem hero
-    └── logo-bw.png              ← logo / favicon
+├── index.html                          ← página principal
+├── servicos.html                       ← página de serviços
+├── aplv-alergia-proteina-leite-vaca.html
+├── asma-infantil.html
+├── rinite-alergica-infantil.html
+├── dermatite-atopica-bebe-crianca.html
+├── imunoterapia-vacina-para-alergia.html
+├── urticaria-infantil.html
+├── teste-alergico-prick-test.html
+├── imunodeficiencia-infantil.html
+├── 404.html
+├── robots.txt / sitemap.xml / llms.txt ← SEO e IA
+├── vercel.json                         ← configuração do Vercel (cleanUrls + headers)
+├── img/                                ← imagens do site (WebP otimizadas)
+└── images/                             ← imagens auxiliares (flyer de serviços)
 ```
 
 ## Como fazer o deploy
