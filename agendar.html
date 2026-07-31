@@ -43,9 +43,15 @@ h1,h2,h3{font-family:var(--serif);color:var(--navy);line-height:1.15}
 
 /* topo */
 .top{background:linear-gradient(155deg,var(--navy-deep),var(--navy-2));color:#fff;padding:22px 0 34px}
-.brand{display:flex;flex-direction:column;line-height:1.15;margin-bottom:20px}
+.brand{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.brand img{width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:50% 18%;border:2px solid rgba(201,162,75,.55);flex:none}
+.brand div{display:flex;flex-direction:column;line-height:1.15}
 .brand b{font-family:var(--serif);color:#fff;font-size:1.05rem;font-weight:600}
 .brand span{color:var(--gold-soft);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase}
+.who{display:grid;gap:18px;align-items:center}
+.who img{border-radius:20px;object-fit:cover;object-position:50% 20%;width:100%;max-height:340px;box-shadow:var(--shadow)}
+.who p{font-size:.95rem}
+@media(min-width:640px){.who{grid-template-columns:230px 1fr}.who img{max-height:280px}}
 .top h1{color:#fff;font-size:clamp(1.65rem,5.4vw,2.4rem);margin:.35rem 0 .7rem}
 .top .lead{color:#C9D6E6;font-size:1rem;max-width:52ch}
 .cred{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 22px}
@@ -102,7 +108,10 @@ footer a{color:var(--gold-soft)}
 
 <div class="top">
   <div class="wrap">
-    <div class="brand"><b>Dr. Bruno William</b><span>Alergia e Imunologia Pediátrica</span></div>
+    <div class="brand">
+      <img src="/img/dr-bruno-hero.webp" width="52" height="52" alt="Dr. Bruno William Lopes de Almeida" fetchpriority="high">
+      <div><b>Dr. Bruno William</b><span>Alergia e Imunologia Pediátrica</span></div>
+    </div>
     <span class="kicker">Consulta particular · Tatuapé e Ibirapuera</span>
     <h1>Alergia do seu filho avaliada por um especialista</h1>
     <p class="lead">Investigação completa de alergia alimentar, asma, rinite, dermatite atópica, urticária e imunodeficiências — em crianças e adultos.</p>
@@ -138,6 +147,19 @@ footer a{color:var(--gold-soft)}
       <div class="card"><h3>Asma e rinite alérgica</h3><p>Controle das crises, uso correto das medicações e identificação dos gatilhos ambientais.</p></div>
       <div class="card"><h3>Dermatite atópica e urticária</h3><p>Cuidados com a pele, controle da coceira e investigação das causas.</p></div>
       <div class="card"><h3>Imunodeficiências</h3><p>Avaliação da criança que adoece com frequência acima do esperado para a idade.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>Quem vai atender seu filho</h2>
+    <div class="who">
+      <img src="/img/dr-bruno-hero.webp" width="440" height="580" alt="Dr. Bruno William Lopes de Almeida em seu consultório" loading="lazy">
+      <div>
+        <p><strong>Dr. Bruno William Lopes de Almeida</strong> é médico alergista e imunologista, com residência e especialização pela UNIFESP.</p>
+        <p style="margin-top:10px">CRM-SP 222528 · RQE 1406541 — título de especialista em Alergia e Imunologia registrado no Conselho Regional de Medicina.</p>
+      </div>
     </div>
   </div>
 </section>
