@@ -707,6 +707,23 @@ if (matchMedia('(min-width:900px) and (prefers-reduced-motion:no-preference)').m
 }
 </script>
 <script>
+  (function () {
+    var unidade = (new URLSearchParams(window.location.search).get('unidade') || '').toLowerCase();
+    var textos = {
+      tatuape: 'Olá, Dr. Bruno! Vim pelo anúncio da unidade Tatuapé e gostaria de agendar uma consulta de alergia e imunologia.',
+      ibirapuera: 'Olá, Dr. Bruno! Vim pelo anúncio da unidade Ibirapuera e gostaria de agendar uma consulta de alergia e imunologia.'
+    };
+    var texto = textos[unidade];
+    if (!texto) return;
+    document.querySelectorAll('a[href*="wa.me"]').forEach(function (a) {
+      var url = new URL(a.href);
+      if (!url.searchParams.has('text')) return;
+      url.searchParams.set('text', texto);
+      a.href = url.toString();
+    });
+  })();
+</script>
+<script>
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
