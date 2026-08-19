@@ -230,6 +230,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(7,26,50,.9);backdrop-fil
 .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.09);border:1px solid rgba(229,211,168,.35);color:var(--gold-soft);font-size:.8rem;font-weight:600;padding:8px 16px;border-radius:999px}
 .badge::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold);animation:pulse 2.4s infinite}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(201,162,75,.5)}55%{box-shadow:0 0 0 7px rgba(201,162,75,0)}}
+.hero p.pain{color:#E8EDF5;font-size:1.12rem;font-weight:500;font-style:italic;max-width:46ch;margin:18px 0 0;padding-left:14px;border-left:2px solid var(--gold)}
 .hero h1{color:#fff;font-size:clamp(2.15rem,6.6vw,3.6rem);font-weight:600;margin:20px 0 14px}
 .hero h1 .gold{color:var(--gold);font-style:italic}
 .hero p.sub{color:#C9D6E6;font-size:1.05rem;max-width:48ch}
@@ -280,6 +281,22 @@ header{position:sticky;top:0;z-index:50;background:rgba(7,26,50,.9);backdrop-fil
 .cred b{color:var(--navy);font-size:.92rem}
 @media(min-width:900px){.sobre-grid{grid-template-columns:.9fr 1.1fr;align-items:center}}
 
+/* ---------- mini CTA (repetida entre seções) ---------- */
+.btn-sm{padding:12px 22px;font-size:.9rem}
+.mini-cta{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:30px;padding-top:26px;border-top:1px solid var(--sand)}
+.mini-cta p{color:var(--ink-soft);font-size:.95rem;margin:0;font-weight:600}
+.mini-cta.on-dark{border-top-color:rgba(255,255,255,.12)}
+.mini-cta.on-dark p{color:#C9D6E6}
+.mini-cta.center{justify-content:center;text-align:center}
+
+/* ---------- consultório ---------- */
+.consultorio{background:var(--cream-2)}
+.cons-grid{display:grid;gap:16px;margin-top:38px;grid-template-columns:1fr}
+.cons-card{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/3}
+.cons-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+.cons-card:hover img{transform:scale(1.05)}
+@media(min-width:760px){.cons-grid{grid-template-columns:repeat(3,1fr)}}
+
 /* ---------- trajetória ---------- */
 .traj{background:linear-gradient(165deg,var(--navy) 0%,var(--navy-deep) 100%);color:#fff;position:relative;overflow:hidden}
 .traj::before{content:"";position:absolute;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(201,162,75,.13),transparent 65%);top:-200px;right:-140px}
@@ -303,7 +320,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(7,26,50,.9);backdrop-fil
 .treat-grid{display:grid;gap:16px;margin-top:38px;grid-template-columns:1fr}
 .tcard{display:block;background:#fff;border:1px solid var(--sand);border-radius:var(--radius);padding:26px 24px;transition:transform .25s var(--ease),box-shadow .25s var(--ease),border-color .25s}
 .tcard:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:var(--gold-soft)}
-.tcard .tic{width:46px;height:46px;border-radius:13px;background:var(--cream-2);display:grid;place-items:center;margin-bottom:16px;transition:transform .25s var(--ease)}
+.tcard .tic{width:46px;height:46px;border-radius:13px;background:linear-gradient(135deg,var(--cream-2),var(--sand-deep));display:grid;place-items:center;margin-bottom:16px;transition:transform .25s var(--ease)}
 .tcard:hover .tic{transform:scale(1.08) rotate(-4deg)}
 .tcard .tic svg{width:23px;height:23px;color:var(--gold);stroke-width:1.8}
 .tcard h3{font-size:1.12rem;margin-bottom:6px}
@@ -325,6 +342,9 @@ header{position:sticky;top:0;z-index:50;background:rgba(7,26,50,.9);backdrop-fil
 .band::before{content:"";position:absolute;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(201,162,75,.22),transparent 65%);top:-160px;right:-100px}
 .band h2{color:#fff;font-size:clamp(1.5rem,4.5vw,2.1rem)}
 .band p{color:#C9D6E6;margin:10px auto 24px;max-width:46ch}
+.google-seal{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-size:.85rem;color:#C9D6E6;font-weight:600}
+.google-seal:hover{color:#fff}
+.google-seal .stars-sm{color:var(--gold);letter-spacing:2px;font-size:.85rem}
 @media(min-width:760px){.band{padding:58px 60px}}
 
 /* ---------- depoimentos ---------- */
@@ -431,9 +451,9 @@ footer a:hover{color:#fff}
       <a href="#depoimentos">Depoimentos</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <a class="btn btn-wa nav-cta" href="https://wa.me/5511920383955?text=Ol%C3%A1%2C+Dr.+Bruno!+Gostaria+de+agendar+uma+consulta." target="_blank" rel="noopener">
+    <a class="btn btn-wa nav-cta" href="https://wa.me/5511920383955?text=Ol%C3%A1%2C+Dr.+Bruno!+Gostaria+de+agendar+uma+consulta.+%28Vim+pelo+site%29" target="_blank" rel="noopener">
       <svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2-1.42.25-.7.25-1.3.18-1.42-.07-.12-.27-.2-.57-.35M12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 7 2.9 9.83 9.83 0 0 1 2.89 7c0 5.45-4.44 9.88-9.9 9.88m8.42-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.59 5.94L.06 24l6.3-1.65a11.9 11.9 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.47-8.4"/></svg>
-      WhatsApp
+      Agendar Consulta
     </a>
     <button class="burger" aria-label="Abrir menu" onclick="document.querySelector('.mobile-menu').classList.toggle('open')"><span></span></button>
   </div>
@@ -444,7 +464,7 @@ footer a:hover{color:#fff}
     <a href="#consulta" onclick="this.parentElement.classList.remove('open')">Como Funciona a Consulta</a>
     <a href="#depoimentos" onclick="this.parentElement.classList.remove('open')">Depoimentos</a>
     <a href="#faq" onclick="this.parentElement.classList.remove('open')">Perguntas Frequentes</a>
-    <a href="https://wa.me/5511920383955?text=Ol%C3%A1%2C+Dr.+Bruno!+Gostaria+de+agendar+uma+consulta." target="_blank" rel="noopener">Agendar pelo WhatsApp →</a>
+    <a href="https://wa.me/5511920383955?text=Ol%C3%A1%2C+Dr.+Bruno!+Gostaria+de+agendar+uma+consulta.+%28Vim+pelo+site%29" target="_blank" rel="noopener">Agendar Consulta →</a>
   </nav>
 </header>
 
@@ -453,6 +473,7 @@ footer a:hover{color:#fff}
   <div class="wrap hero-grid">
     <div class="hero-txt">
       <span class="badge hi hi-1">Residência UNIFESP · RQE 1406541</span>
+      <p class="pain hi hi-1">Já perdeu a conta de quantas vezes foi à emergência com crise de alergia do seu filho? Quanto você já gastou com remédio que não resolveu de verdade?</p>
       <h1 class="hi hi-2">Ajudo famílias a respirarem aliviadas, <span class="gold">livres das alergias.</span></h1>
       <p class="sub hi hi-3"><b>Dr. Bruno William</b> — Especialista em Alergia e Imunologia Pediátrica com residência pela <b>UNIFESP — Escola Paulista de Medicina</b>. Atendimento em São Paulo com encaixe rápido para quadros agudos — teleconsulta disponível para retornos e pacientes de outras cidades.</p>
       <div class="chips hi hi-4">
@@ -462,7 +483,7 @@ footer a:hover{color:#fff}
         <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Sem encaminhamento</span>
       </div>
       <div class="hero-ctas hi hi-5">
-        <a class="btn btn-wa" href="https://wa.me/5511920383955?text=Ol%C3%A1%2C+Dr.+Bruno!+Gostaria+de+agendar+uma+consulta." target="_blank" rel="noopener">
+        <a class="btn btn-wa" href="https://wa.me/5511920383955?text=Ol%C3%A1%2C+Dr.+Bruno!+Gostaria+de+agendar+uma+consulta.+%28Vim+pelo+site%29" target="_blank" rel="noopener">
           <svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2-1.42.25-.7.25-1.3.18-1.42-.07-.12-.27-.2-.57-.35M12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 7 2.9 9.83 9.83 0 0 1 2.89 7c0 5.45-4.44 9.88-9.9 9.88m8.42-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.59 5.94L.06 24l6.3-1.65a11.9 11.9 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.47-8.4"/></svg>
           Agendar Consulta
         </a>
@@ -471,7 +492,7 @@ footer a:hover{color:#fff}
       <p class="hero-note hi hi-6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Investigação com testes alérgicos e anamnese detalhada</p>
     </div>
     <div class="hero-photo hi hi-7">
-      <img src="img/dr-bruno-hero.webp" srcset="img/dr-bruno-hero-sm.webp 520w, img/dr-bruno-hero.webp 900w" sizes="(max-width:900px) 100vw, 480px" alt="Dr. Bruno William, alergista pediátrico, sorrindo em consultório infantil" width="900" height="1214" fetchpriority="high">
+      <img src="img/dr-bruno-hero.webp" srcset="img/dr-bruno-hero-sm.webp 520w, img/dr-bruno-hero.webp 900w" sizes="(max-width:900px) 100vw, 480px" alt="Dr. Bruno William, alergista e imunologista, especialista em alergia e imunologia" width="900" height="1352" fetchpriority="high">
       <div class="crm-card"><b>CRM-SP 222528</b><span>Residência UNIFESP · Alergia e Imunologia Pediátrica</span></div>
     </div>
   </div>
@@ -487,7 +508,7 @@ footer a:hover{color:#fff}
 
 <section id="sobre">
   <div class="wrap sobre-grid">
-    <div class="sobre-photo rv-l"><img src="img/dr-bruno-sobre.webp" alt="Dr. Bruno William Lopes de Almeida, alergista e imunologista pediátrico" loading="lazy" width="800" height="1200"></div>
+    <div class="sobre-photo rv-l"><img src="img/dr-bruno-sobre.webp" srcset="img/dr-bruno-sobre-sm.webp 480w, img/dr-bruno-sobre.webp 800w" sizes="(max-width:900px) 90vw, 430px" alt="Dr. Bruno William Lopes de Almeida, alergista e imunologista pediátrico, sorrindo no consultório infantil" loading="lazy" width="800" height="1200"></div>
     <div class="rv-r">
       <span class="kicker">Sobre o médico</span>
       <h2>Dr. Bruno William<br>Lopes de Almeida</h2>
@@ -500,13 +521,30 @@ footer a:hover{color:#fff}
         <div class="cred"><small>RQE Pediatria</small><b>140654</b></div>
         <div class="cred"><small>Formação</small><b>Residência UNIFESP — EPM</b></div>
       </div>
+      <div class="mini-cta">
+        <p>Já decidiu? Fale agora com a equipe do Dr. Bruno.</p>
+        <a class="btn btn-wa btn-sm" href="https://wa.me/5511920383955?text=Ol%C3%A1%2C+Dr.+Bruno!+Gostaria+de+agendar+uma+consulta.+%28Vim+pelo+site%29" target="_blank" rel="noopener">Agendar Consulta</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="consultorio">
+  <div class="wrap">
+    <span class="kicker rv">Nosso espaço</span>
+    <h2 class="rv">Um consultório pensado <em class="gold-i">para crianças</em> se sentirem à vontade</h2>
+    <p class="lead rv">Unidades equipadas para investigação completa, com um ambiente acolhedor para os pequenos pacientes — nada de sala de espera fria.</p>
+    <div class="cons-grid" data-stagger>
+      <div class="cons-card rv"><img src="img/consultorio-2.webp" alt="Área de espera infantil do consultório, com cantinho de brinquedos e decoração lúdica" loading="lazy" width="640" height="427"></div>
+      <div class="cons-card rv"><img src="img/consultorio-1.webp" alt="Sala de atendimento pediátrico com bichinhos de pelúcia e espaço para teleconsulta" loading="lazy" width="800" height="533"></div>
+      <div class="cons-card rv"><img src="img/consultorio-3.webp" alt="Sala de consulta e exame, ambiente clínico com vista da cidade" loading="lazy" width="547" height="365"></div>
     </div>
   </div>
 </section>
 
 <section class="traj">
   <div class="wrap traj-grid">
-    <div class="traj-photo rv-l"><img src="img/dr-bruno-formacao.webp" alt="Dr. Bruno William Lopes de Almeida, alergista e imunologista pediátrico, em ambiente profissional" loading="lazy" width="860" height="1075"></div>
+    <div class="traj-photo rv-l"><img src="img/dr-bruno-formacao.webp" srcset="img/dr-bruno-formacao-sm.webp 480w, img/dr-bruno-formacao.webp 860w" sizes="(max-width:900px) 90vw, 320px" alt="Dr. Bruno William Lopes de Almeida, alergista e imunologista pediátrico, em ambiente profissional" loading="lazy" width="860" height="1075"></div>
     <div class="rv-r">
     <span class="kicker">Trajetória</span>
     <h2>Formação construída nas <em class="gold-i">principais escolas</em> de medicina do país</h2>
@@ -537,6 +575,10 @@ footer a:hover{color:#fff}
       <a class="tcard rv" href="/teste-alergico-prick-test"><div class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6v5l4 9a3 3 0 0 1-3 4H8a3 3 0 0 1-3-4l4-9V3z"/><path d="M7 14h10" opacity=".5"/></svg></div><h3>Testes Alérgicos</h3><p>Identificação dos alérgenos por testes precisos, como o Prick Test cutâneo.</p></a>
       <a class="tcard rv" href="/imunodeficiencia-infantil"><div class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4" opacity=".7"/></svg></div><h3>Imunodeficiências</h3><p>Diagnóstico e acompanhamento de erros inatos da imunidade em crianças.</p></a>
     </div>
+    <div class="mini-cta center">
+      <p>Reconheceu os sintomas do seu filho em alguma dessas condições?</p>
+      <a class="btn btn-wa btn-sm" href="https://wa.me/5511920383955?text=Ol%C3%A1%2C+Dr.+Bruno!+Gostaria+de+agendar+uma+consulta.+%28Vim+pelo+site%29" target="_blank" rel="noopener">Agendar Consulta</a>
+    </div>
   </div>
 </section>
 
@@ -558,7 +600,7 @@ footer a:hover{color:#fff}
     <div class="band rv-s">
       <h2>Seu filho merece o melhor cuidado.</h2>
       <p>Fale agora com a equipe do Dr. Bruno e verifique a disponibilidade para a primeira consulta.</p>
-      <a class="btn btn-wa" href="https://wa.me/5511920383955?text=Ol%C3%A1%2C+Dr.+Bruno!+Gostaria+de+agendar+uma+consulta." target="_blank" rel="noopener">Verificar disponibilidade no WhatsApp</a>
+      <a class="btn btn-wa" href="https://wa.me/5511920383955?text=Ol%C3%A1%2C+Dr.+Bruno!+Gostaria+de+agendar+uma+consulta.+%28Vim+pelo+site%29" target="_blank" rel="noopener">Agendar Consulta</a>
     </div>
   </div>
 </section>
@@ -587,9 +629,9 @@ footer a:hover{color:#fff}
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Ideal para retornos e acompanhamentos</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Mesma atenção e tempo de consulta</li>
       </ul>
-      <a class="btn btn-navy" href="https://wa.me/5511920383955?text=Ol%C3%A1%2C+Dr.+Bruno!+Gostaria+de+agendar+uma+teleconsulta." target="_blank" rel="noopener">Agendar teleconsulta</a>
+      <a class="btn btn-navy" href="https://wa.me/5511920383955?text=Ol%C3%A1%2C+Dr.+Bruno!+Gostaria+de+agendar+uma+teleconsulta.+%28Vim+pelo+site%29" target="_blank" rel="noopener">Agendar Consulta</a>
     </div>
-    <div class="tele-photo rv-r"><img src="img/dr-bruno-tele.webp" alt="Dr. Bruno William em atendimento online" loading="lazy" width="700" height="1050"></div>
+    <div class="tele-photo rv-r"><img src="img/dr-bruno-tele.webp" srcset="img/dr-bruno-tele-sm.webp 400w, img/dr-bruno-tele.webp 700w" sizes="(max-width:900px) 90vw, 420px" alt="Dr. Bruno William em atendimento online" loading="lazy" width="700" height="1050"></div>
   </div>
 </section>
 
@@ -606,6 +648,10 @@ footer a:hover{color:#fff}
       <details><summary>Preciso de encaminhamento para agendar?</summary><p>Não. A primeira consulta pode ser agendada diretamente, sem necessidade de encaminhamento de outro médico.</p></details>
       <details><summary>O Dr. Bruno trata APLV (alergia à proteína do leite de vaca)?</summary><p>Sim. O Dr. Bruno oferece investigação completa e manejo clínico da APLV e de outras alergias alimentares, desde bebês até adolescentes.</p></details>
       <details><summary>Atende adultos também?</summary><p>Sim. O foco principal é o público pediátrico, mas adultos com doenças alérgicas e imunológicas também são atendidos.</p></details>
+    </div>
+    <div class="mini-cta center" style="max-width:780px;margin-inline:auto">
+      <p>Ainda com dúvidas? Fale direto com a equipe.</p>
+      <a class="btn btn-wa btn-sm" href="https://wa.me/5511920383955?text=Ol%C3%A1%2C+Dr.+Bruno!+Gostaria+de+agendar+uma+consulta.+%28Vim+pelo+site%29" target="_blank" rel="noopener">Agendar Consulta</a>
     </div>
   </div>
 </section>
@@ -639,7 +685,10 @@ footer a:hover{color:#fff}
     <div class="band rv-s">
       <h2>Vamos cuidar do seu filho <em style="color:var(--gold)">juntos.</em></h2>
       <p>Resposta rápida pelo WhatsApp. Atendimento presencial em São Paulo ou online para todo o Brasil.</p>
-      <a class="btn btn-wa" href="https://wa.me/5511920383955?text=Ol%C3%A1%2C+Dr.+Bruno!+Gostaria+de+agendar+uma+consulta." target="_blank" rel="noopener">Falar com a equipe do Dr. Bruno</a>
+      <a class="btn btn-wa" href="https://wa.me/5511920383955?text=Ol%C3%A1%2C+Dr.+Bruno!+Gostaria+de+agendar+uma+consulta.+%28Vim+pelo+site%29" target="_blank" rel="noopener">Agendar Consulta</a>
+      <a class="google-seal" href="https://share.google/HBIi3hYCyyVctzSnr" target="_blank" rel="noopener">
+        <span class="stars-sm">★★★★★</span> 5,0 no Google — ver avaliações
+      </a>
     </div>
   </div>
 </section>
@@ -676,12 +725,12 @@ footer a:hover{color:#fff}
   <div class="wrap f-bottom">
     © 2026 Dr. Bruno William — Alergia e Imunologia Pediátrica. Todos os direitos reservados.<br>
     CRM-SP 222528 · RQE 1406541 (Alergia e Imunologia) · RQE 140654 (Pediatria)<br>
-    Conteúdo revisado e atualizado em 20 de julho de 2026<br>
+    Conteúdo revisado e atualizado em 19 de agosto de 2026<br>
     <a href="/politica-de-privacidade">Política de Privacidade</a>
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/5511920383955?text=Ol%C3%A1%2C+Dr.+Bruno!+Gostaria+de+agendar+uma+consulta." target="_blank" rel="noopener" aria-label="Agendar pelo WhatsApp">
+<a class="wa-float" href="https://wa.me/5511920383955?text=Ol%C3%A1%2C+Dr.+Bruno!+Gostaria+de+agendar+uma+consulta.+%28Vim+pelo+site%29" target="_blank" rel="noopener" aria-label="Agendar pelo WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2-1.42.25-.7.25-1.3.18-1.42-.07-.12-.27-.2-.57-.35M12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 7 2.9 9.83 9.83 0 0 1 2.89 7c0 5.45-4.44 9.88-9.9 9.88m8.42-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.59 5.94L.06 24l6.3-1.65a11.9 11.9 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.47-8.4"/></svg>
 </a>
 
