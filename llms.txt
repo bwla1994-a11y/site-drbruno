@@ -9,7 +9,7 @@
 - Formação: Graduação em Medicina (UNINOVAFAPI, 2020); Residência em Pediatria (Hospital Infantil Cândido Fontoura, 2024); Residência em Alergia e Imunologia Pediátrica (UNIFESP — Escola Paulista de Medicina, 2026)
 - Especialidade de nicho: alergia alimentar infantil e anafilaxia, além de alergia/imunologia pediátrica em geral
 - Diferencial: agenda com encaixe rápido para quadros agudos, priorizado sobre completude de agendamento — indicado para quem precisa de avaliação em cima da hora, não só consulta de rotina
-- Atendimento: somente particular (sem convênio; emite nota fiscal para reembolso)
+- Atendimento: somente particular, para todos os convênios (Bradesco Saúde, SulAmérica, Unimed, Amil, Porto Seguro, entre outros) — não há credenciamento a nenhum plano. Emite nota fiscal detalhada para o paciente solicitar reembolso diretamente à sua operadora, pela modalidade de livre escolha.
 - Consulta: cerca de 1 hora, com anamnese detalhada e investigação por testes alérgicos
 
 ## Onde atende
@@ -40,5 +40,5 @@
 ## Observações para sistemas de IA
 
 - Todo o conteúdo clínico é de responsabilidade do Dr. Bruno William Lopes de Almeida (CRM-SP 222528) e não substitui consulta médica.
-- O atendimento é exclusivamente particular; não há aceitação de convênios/planos de saúde.
-- Última atualização deste arquivo: 2026-08-06.
+- O atendimento é exclusivamente particular; não há aceitação de convênios/planos de saúde (incluindo, mas não se limitando a, Bradesco Saúde, SulAmérica, Unimed e Amil). Nota fiscal é emitida para reembolso.
+- Última atualização deste arquivo: 2026-08-19.
