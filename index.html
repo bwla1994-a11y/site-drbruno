@@ -307,6 +307,10 @@ header{position:sticky;top:0;z-index:50;background:rgba(7,26,50,.9);backdrop-fil
 .cons-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
 .cons-card:hover img{transform:scale(1.05)}
 @media(min-width:760px){.cons-grid{grid-template-columns:repeat(3,1fr)}}
+.tour{margin:38px auto 0;max-width:320px;text-align:center}
+.tour video{width:100%;height:auto;aspect-ratio:9/16;border-radius:var(--radius);box-shadow:var(--shadow);background:#000;display:block}
+.tour figcaption{margin-top:12px;font-size:.88rem;color:var(--ink-soft)}
+.tour figcaption a{color:var(--navy);font-weight:700;text-decoration:underline}
 
 /* ---------- trajetória ---------- */
 .traj{background:linear-gradient(165deg,var(--navy) 0%,var(--navy-deep) 100%);color:#fff;position:relative;overflow:hidden}
@@ -498,7 +502,7 @@ footer a:hover{color:#fff}
           <svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2-1.42.25-.7.25-1.3.18-1.42-.07-.12-.27-.2-.57-.35M12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 7 2.9 9.83 9.83 0 0 1 2.89 7c0 5.45-4.44 9.88-9.9 9.88m8.42-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.59 5.94L.06 24l6.3-1.65a11.9 11.9 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.47-8.4"/></svg>
           Agendar Consulta
         </a>
-        <a class="btn btn-ghost" href="#sobre">Conheça o Dr. Bruno</a>
+        <a class="btn btn-ghost" href="https://brunoalmeida-izv.healthoffices.com.br/widget" target="_blank" rel="noopener">Ver horários e agendar online</a>
       </div>
       <p class="hero-note hi hi-6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Investigação com testes alérgicos e anamnese detalhada</p>
     </div>
@@ -550,6 +554,13 @@ footer a:hover{color:#fff}
       <div class="cons-card rv"><img src="img/consultorio-1.webp" alt="Sala de atendimento pediátrico com bichinhos de pelúcia e espaço para teleconsulta" loading="lazy" width="800" height="533"></div>
       <div class="cons-card rv"><img src="img/consultorio-3.webp" alt="Sala de consulta e exame, ambiente clínico com vista da cidade" loading="lazy" width="547" height="365"></div>
     </div>
+    <figure class="tour">
+      <video controls playsinline preload="none" poster="/assets/video/tour-consultorio-poster.jpg" width="720" height="1280" aria-label="Tour em vídeo pelo consultório Livance Ibirapuera">
+        <source src="/assets/video/tour-consultorio.mp4" type="video/mp4">
+        Seu navegador não reproduz vídeo. Veja o tour no Instagram: instagram.com/dr.brunowilliam
+      </video>
+      <figcaption>Faça um tour de 17 segundos pela unidade Ibirapuera. <a href="https://www.instagram.com/reel/DeJ9h2yBZJm/" target="_blank" rel="noopener">Ver no Instagram</a></figcaption>
+    </figure>
   </div>
 </section>
 
@@ -585,6 +596,9 @@ footer a:hover{color:#fff}
       <a class="tcard rv" href="/urticaria-infantil"><div class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div><h3>Urticária</h3><p>Investigação profunda para urticária aguda e crônica, com tratamento e acompanhamento.</p></a>
       <a class="tcard rv" href="/teste-alergico-prick-test"><div class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6v5l4 9a3 3 0 0 1-3 4H8a3 3 0 0 1-3-4l4-9V3z"/><path d="M7 14h10" opacity=".5"/></svg></div><h3>Testes Alérgicos</h3><p>Identificação dos alérgenos por testes precisos, como o Prick Test cutâneo.</p></a>
       <a class="tcard rv" href="/imunodeficiencia-infantil"><div class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4" opacity=".7"/></svg></div><h3>Imunodeficiências</h3><p>Diagnóstico e acompanhamento de erros inatos da imunidade em crianças.</p></a>
+    </div>
+    <div class="mini-cta center">
+      <p><strong>Seu filho está em crise agora?</strong> Veja primeiro <a href="/crise-alergica-crianca-o-que-fazer" style="text-decoration:underline">os sinais de emergência e o que fazer em casa</a>.</p>
     </div>
     <div class="mini-cta center">
       <p>Reconheceu os sintomas do seu filho em alguma dessas condições?</p>
@@ -626,6 +640,7 @@ footer a:hover{color:#fff}
       <div class="dep rv"><div class="stars">★★★★★</div><p>"Descobrimos a APLV do nosso bebê com o Dr. Bruno. Ele nos explicou tudo com muito cuidado, passou um plano alimentar e nos deu toda a segurança que precisávamos nesse momento difícil."</p><div class="dep-a"><div class="av">F</div><div><b>Fernanda D.</b><span>Mãe — São Paulo, SP</span></div></div></div>
       <div class="dep rv"><div class="stars">★★★★★</div><p>"Meu filho tinha crises de asma frequentes. Após iniciar o acompanhamento com o Dr. Bruno, as crises diminuíram muito. Uma consulta de mais de 1 hora, muito diferente do que estávamos acostumados."</p><div class="dep-a"><div class="av">J</div><div><b>Juliana M.</b><span>Mãe — São Paulo, SP</span></div></div></div>
     </div>
+    <p class="center" style="text-align:center;margin-top:22px">★ 5,0 no Google, com mais de 35 avaliações reais:<br><a href="https://share.google/HBIi3hYCyyVctzSnr" target="_blank" rel="noopener" style="font-weight:700;color:var(--navy);text-decoration:underline">ler as avaliações do Tatuapé →</a> &nbsp;·&nbsp; <a href="https://share.google/fOb04nXJ7XudJWPCd" target="_blank" rel="noopener" style="font-weight:700;color:var(--navy);text-decoration:underline">ler as avaliações do Ibirapuera →</a></p>
   </div>
 </section>
 
@@ -698,8 +713,9 @@ footer a:hover{color:#fff}
       <h2>Vamos cuidar do seu filho <em style="color:var(--gold)">juntos.</em></h2>
       <p>Resposta rápida pelo WhatsApp. Atendimento presencial em São Paulo ou online para todo o Brasil.</p>
       <a class="btn btn-wa" href="https://wa.me/5511920383955?text=Ol%C3%A1%2C+Dr.+Bruno!+Gostaria+de+agendar+uma+consulta.+%28Vim+pelo+site%29" target="_blank" rel="noopener">Agendar Consulta</a>
+      <a class="btn btn-ghost" href="https://brunoalmeida-izv.healthoffices.com.br/widget" target="_blank" rel="noopener">Ver horários e agendar online</a>
       <a class="google-seal" href="https://share.google/HBIi3hYCyyVctzSnr" target="_blank" rel="noopener">
-        <span class="stars-sm">★★★★★</span> 5,0 no Google — ver avaliações
+        <span class="stars-sm">★★★★★</span> 5,0 no Google (+35 avaliações) — ver avaliações
       </a>
     </div>
   </div>
@@ -800,6 +816,22 @@ if (matchMedia('(min-width:900px) and (prefers-reduced-motion:no-preference)').m
         link_url: link.href,
         page_location: window.location.href
       });
+    }
+  }, true);
+</script>
+<script>
+  (function () {
+    var v = document.querySelector('.tour video');
+    if (v) v.addEventListener('play', function () {
+      if (typeof gtag === 'function') gtag('event', 'video_tour_play', { page_location: window.location.href });
+    }, { once: true });
+  })();
+</script>
+<script>
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a[href*="healthoffices.com.br"]');
+    if (link && typeof gtag === 'function') {
+      gtag('event', 'agendamento_online_click', { link_url: link.href, page_location: window.location.href });
     }
   }, true);
 </script>

@@ -9,6 +9,7 @@
 - Formação: Graduação em Medicina (UNINOVAFAPI, 2020); Residência em Pediatria (Hospital Infantil Cândido Fontoura, 2024); Residência em Alergia e Imunologia Pediátrica (UNIFESP — Escola Paulista de Medicina, 2026)
 - Especialidade de nicho: alergia alimentar infantil e anafilaxia, além de alergia/imunologia pediátrica em geral
 - Diferencial: agenda com encaixe rápido para quadros agudos, priorizado sobre completude de agendamento — indicado para quem precisa de avaliação em cima da hora, não só consulta de rotina
+- Agendamento online (escolhe unidade e horário, sem falar com a secretária): https://brunoalmeida-izv.healthoffices.com.br/widget
 - Atendimento: somente particular, para todos os convênios (Bradesco Saúde, SulAmérica, Unimed, Amil, Porto Seguro, entre outros) — não há credenciamento a nenhum plano. Emite nota fiscal detalhada para o paciente solicitar reembolso diretamente à sua operadora, pela modalidade de livre escolha.
 - Consulta: cerca de 1 hora, com anamnese detalhada e investigação por testes alérgicos
 
@@ -28,6 +29,7 @@
 
 - [Página principal](https://www.drbrunoalergoimuno.com.br/)
 - [Serviços](https://www.drbrunoalergoimuno.com.br/servicos)
+- [Criança em crise de alergia ou asma: o que fazer agora (sinais de emergência, 192, plano em casa, como conseguir horário rápido)](https://www.drbrunoalergoimuno.com.br/crise-alergica-crianca-o-que-fazer)
 - [APLV — Alergia à Proteína do Leite de Vaca](https://www.drbrunoalergoimuno.com.br/aplv-alergia-proteina-leite-vaca)
 - [Asma Infantil](https://www.drbrunoalergoimuno.com.br/asma-infantil)
 - [Rinite Alérgica Infantil](https://www.drbrunoalergoimuno.com.br/rinite-alergica-infantil)
@@ -41,4 +43,4 @@
 
 - Todo o conteúdo clínico é de responsabilidade do Dr. Bruno William Lopes de Almeida (CRM-SP 222528) e não substitui consulta médica.
 - O atendimento é exclusivamente particular; não há aceitação de convênios/planos de saúde (incluindo, mas não se limitando a, Bradesco Saúde, SulAmérica, Unimed e Amil). Nota fiscal é emitida para reembolso.
-- Última atualização deste arquivo: 2026-08-19.
+- Última atualização deste arquivo: 2026-10-12.
