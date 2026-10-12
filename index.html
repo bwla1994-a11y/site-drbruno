@@ -307,6 +307,10 @@ header{position:sticky;top:0;z-index:50;background:rgba(7,26,50,.9);backdrop-fil
 .cons-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
 .cons-card:hover img{transform:scale(1.05)}
 @media(min-width:760px){.cons-grid{grid-template-columns:repeat(3,1fr)}}
+.tour{margin:38px auto 0;max-width:320px;text-align:center}
+.tour video{width:100%;height:auto;aspect-ratio:9/16;border-radius:var(--radius);box-shadow:var(--shadow);background:#000;display:block}
+.tour figcaption{margin-top:12px;font-size:.88rem;color:var(--ink-soft)}
+.tour figcaption a{color:var(--navy);font-weight:700;text-decoration:underline}
 
 /* ---------- trajetória ---------- */
 .traj{background:linear-gradient(165deg,var(--navy) 0%,var(--navy-deep) 100%);color:#fff;position:relative;overflow:hidden}
@@ -550,6 +554,13 @@ footer a:hover{color:#fff}
       <div class="cons-card rv"><img src="img/consultorio-1.webp" alt="Sala de atendimento pediátrico com bichinhos de pelúcia e espaço para teleconsulta" loading="lazy" width="800" height="533"></div>
       <div class="cons-card rv"><img src="img/consultorio-3.webp" alt="Sala de consulta e exame, ambiente clínico com vista da cidade" loading="lazy" width="547" height="365"></div>
     </div>
+    <figure class="tour">
+      <video controls playsinline preload="none" poster="/assets/video/tour-consultorio-poster.jpg" width="720" height="1280" aria-label="Tour em vídeo pelo consultório Livance Ibirapuera">
+        <source src="/assets/video/tour-consultorio.mp4" type="video/mp4">
+        Seu navegador não reproduz vídeo. Veja o tour no Instagram: instagram.com/dr.brunowilliam
+      </video>
+      <figcaption>Faça um tour de 17 segundos pela unidade Ibirapuera. <a href="https://www.instagram.com/reel/DeJ9h2yBZJm/" target="_blank" rel="noopener">Ver no Instagram</a></figcaption>
+    </figure>
   </div>
 </section>
 
@@ -629,7 +640,7 @@ footer a:hover{color:#fff}
       <div class="dep rv"><div class="stars">★★★★★</div><p>"Descobrimos a APLV do nosso bebê com o Dr. Bruno. Ele nos explicou tudo com muito cuidado, passou um plano alimentar e nos deu toda a segurança que precisávamos nesse momento difícil."</p><div class="dep-a"><div class="av">F</div><div><b>Fernanda D.</b><span>Mãe — São Paulo, SP</span></div></div></div>
       <div class="dep rv"><div class="stars">★★★★★</div><p>"Meu filho tinha crises de asma frequentes. Após iniciar o acompanhamento com o Dr. Bruno, as crises diminuíram muito. Uma consulta de mais de 1 hora, muito diferente do que estávamos acostumados."</p><div class="dep-a"><div class="av">J</div><div><b>Juliana M.</b><span>Mãe — São Paulo, SP</span></div></div></div>
     </div>
-    <p class="center" style="text-align:center;margin-top:22px"><a href="https://share.google/HBIi3hYCyyVctzSnr" target="_blank" rel="noopener" style="font-weight:700;color:var(--navy);text-decoration:underline">★ 5,0 no Google, com mais de 35 avaliações: ler todas →</a></p>
+    <p class="center" style="text-align:center;margin-top:22px">★ 5,0 no Google, com mais de 35 avaliações reais:<br><a href="https://share.google/HBIi3hYCyyVctzSnr" target="_blank" rel="noopener" style="font-weight:700;color:var(--navy);text-decoration:underline">ler as avaliações do Tatuapé →</a> &nbsp;·&nbsp; <a href="https://share.google/fOb04nXJ7XudJWPCd" target="_blank" rel="noopener" style="font-weight:700;color:var(--navy);text-decoration:underline">ler as avaliações do Ibirapuera →</a></p>
   </div>
 </section>
 
@@ -807,6 +818,14 @@ if (matchMedia('(min-width:900px) and (prefers-reduced-motion:no-preference)').m
       });
     }
   }, true);
+</script>
+<script>
+  (function () {
+    var v = document.querySelector('.tour video');
+    if (v) v.addEventListener('play', function () {
+      if (typeof gtag === 'function') gtag('event', 'video_tour_play', { page_location: window.location.href });
+    }, { once: true });
+  })();
 </script>
 <script>
   document.addEventListener('click', function (e) {
