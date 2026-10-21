@@ -100,8 +100,8 @@ section{padding-block:var(--gap-s)}
 .hero-fig img{position:absolute;left:0;right:0;margin-inline:auto;bottom:0;height:96%;width:auto;max-width:100%;object-fit:contain;object-position:bottom}
 
 /* sobre */
-.sobre{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,112px);align-items:end}
-.sobre .photo{aspect-ratio:4/5;max-height:86svh;width:100%}
+.sobre{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,112px);align-items:start}
+.sobre .photo{aspect-ratio:4/5;max-height:calc(100svh - 140px);width:100%;position:sticky;top:104px}
 .sobre-txt{display:flex;flex-direction:column;gap:26px;padding-bottom:8px}
 .sobre-txt p{max-width:58ch}
 .creds{display:grid;grid-template-columns:1fr 1fr;gap:28px 40px;margin-top:12px}
@@ -253,7 +253,7 @@ footer{background:var(--navy-deep);color:var(--navy-ink);padding-top:var(--gap-s
   .hero-txt{padding:32px var(--m) 0;max-width:none}
   .hero-fig{margin:24px var(--m) 0;height:min(72svh,640px);min-height:420px}
   .sobre,.cons-top,.treat-head,.how-head,.dep,.tele,.faq-wrap,.traj-head{grid-template-columns:1fr}
-  .sobre .photo{max-width:420px}
+  .sobre .photo{max-width:420px;position:static;max-height:none}
   .dep-side,.faq-wrap h2{position:static}
   .cons-top .tour{justify-self:start}
   .menu{grid-template-columns:1fr}
