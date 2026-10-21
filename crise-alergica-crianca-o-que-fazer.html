@@ -194,7 +194,7 @@
   document.addEventListener('click', function (e) {
     var link = e.target.closest('a[href*="wa.me"]');
     if (link && typeof gtag === 'function') {
-      gtag('event', 'whatsapp_click', { link_url: link.href, page_location: window.location.href });
+      gtag('event', 'whatsapp_click', { link_url: link.href, origem: window.__origem || 'SITE', page_location: window.location.href });
     }
     var online = e.target.closest('a[href*="healthoffices.com.br"]');
     if (online && typeof gtag === 'function') {
@@ -207,5 +207,6 @@
   }, true);
 </script>
 <script src="/js/reveal.js" defer></script>
+<script src="/js/origem.js"></script>
 </body>
 </html>

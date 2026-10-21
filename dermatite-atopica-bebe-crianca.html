@@ -190,12 +190,13 @@
     var link = e.target.closest('a[href*="wa.me"]');
     if (link && typeof gtag === 'function') {
       gtag('event', 'whatsapp_click', {
-        link_url: link.href,
+        link_url: link.href, origem: window.__origem || 'SITE',
         page_location: window.location.href
       });
     }
   }, true);
 </script>
 <script src="/js/reveal.js" defer></script>
+<script src="/js/origem.js"></script>
 </body>
 </html>
